@@ -49,4 +49,7 @@ po/*~
 rsconnect/
 
 # Ignore this entire directory
-Files/
+Files/old/
+Files/Old_Iterations/
+Files/rFIA/
+
