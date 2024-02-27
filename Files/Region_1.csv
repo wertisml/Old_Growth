@@ -1,0 +1,44 @@
+﻿region,Forest_Region,OG_Type ,FIA_Code,Habitat_Type_Group ,Age,Large_Tree_Diameter,Stand_Basal_Area,Tree_Per_Acre
+1,1.1,Ponderosa pine ,"220, 221","A, B",150,21,40,8
+1,1.1,Douglas-fir  ,"203, 201","A, B ",150,21,40,8
+1,1.1,Western larch,"320, 321","A, B",150,21,40,8
+1,1.1,Lodgepole pine ,"280, 281","B, C, D, E, G, H, I, J, K ",120,13,60,10
+1,1.1,Pacific yew,"267, 271, 341, 368","C, C1, G1 ",150,21,80,3
+1,1.1,"Douglas-fir, Grand fir, Western larch, Engelmann spruce/subalpine fir, Western white pine,  Ponderosa pine ","203, 201, 267, 320, 321, 266, 240, 241, 220","C, C1, D, E ",150,21,80,10
+1,1.1,"Douglas-fir, Grand fir, Western larch, Western hemlock, Western white pine, Ponderosa pine ","203, 201, 267, 320, 321, 240, 241, 301","F, G, G1",150,21,120,10
+1,1.1,"Douglas-fir, Grand fir, Western larch, Western hemlock, Western white pine, Ponderosa pine ","203, 201, 267, 320, 321, 240, 241, 301","H, I",150,21,80,10
+1,1.1,"Engelmann spruce/subalpine fir, Mountain hemlock/alpine larch/subalpine fir ","266, 270, 268","F, G, G1, H, I ",150,17,80,10
+1,1.1,Whitebark pine,367,K ,150,13,40,5
+1,1.1,Whitebark pine ,367,"I, J",150,13,60,5
+1,1.1,Western redcedar,304,"F, G, G1 ",150,25,120,10
+1,1.1,"Douglas-fir, Western larch, Engelmann spruce/subalpine fir, Mountain hemlock/alpine larch/subalpine fir, Western white pine ","201, 321, 266, 270",J ,150,17,60,10
+1,1.1,"Engelmann spruce/subalpine fir, Mountain hemlock/alpine larch/subalpine fir ","266, 270",K ,150,13,40,5
+1,1.1,Aspen,901,"A, B, C, D, E, F, G, H, I, J",100,12,1,10
+1,1.1,Juniper,"182, 184, 185","A, B, C, D, E, F, G, H, I, J",200,12,1,12
+1,1.2,Juniper,"182, 184, 185","A, B, C, D, E, F, G, H, I, J",200,12,1,12
+1,1.2,Aspen,901,"A, B, C, D, E, F, G, H, I, J",100,12,1,10
+1,1.2,"Ponderosa pine, Douglas-fir, Western larch, Grand fir, Lodgepole pine","220, 221, 201, 320, 321, 280, 281, 267","A, B",170,21,60,8
+1,1.2,"Douglas-fir, western larch, Engelmann spruce/subalpine fir, Grand fir","200, 201, 267, 320, 321, 266",C,170,21,80,8
+1,1.2,Lodgepole pine,267,E,140,13,60,10
+1,1.2,Lodgepole pine,267,C,140,13,70,10
+1,1.2,Lodgepole pine,267,"D, F, G, H",140,13,80,10
+1,1.2,"Engelmann spruce/subalpine fir, Douglas-fir, Grand fir, Western redcedar, Western larch, Mountain hemlock/subalpine fir, Ponderosa pine, Western white pine, Western hemlock, combinations of alpine larch/whitebark pine/limber pine","265, 200, 201, 267, 304, 320, 321, 270, 268, 220, 221, 240, 241, 301, 367, 368, 366","D, E, F",180,21,80,10
+1,1.2,Engelmann spruce/subalpine fir,"265, 266",H,180,17,70,10
+1,1.2,"Engelmann spruce/subalpine fir, Douglas-fir, Grand fir, Western larch, Western larch, Mountain hemlock/subalpine fir, Ponderosa pine, Western white pine, combinations of alpine larch/whitebark pine/limber pine","265, 266, 200, 201, 267, 300, 301, 220, 221, 240, 241, 367, 366","H, G",180,17,80,10
+1,1.2,"Engelmann spruce/subalpine fir, ombinations of alpine larch/whitebark pine/limber pine, Douglas-fir, Western larch","265, 266, 200, 201, 320, 321, 270",I,180,13,60,10
+1,1.2,Lodgepole pine,267,I,140,9,70,30
+1,1.2,"Engelmann spruce/subalpine fir, combinations of alpine larch/whitebark pine/limber pine","265, 266, 367, 366",J,180,13,80,20
+1,1.3,Douglas-fir,"200, 201",A,200,17,60,4
+1,1.3,Douglas-fir,"200, 201","B, C, D, E, F, H",200,19,60,5
+1,1.3,Douglas-fir,"200, 201",G,180,17,80,10
+1,1.3,Ponderosa pine,"220, 221","A, B, C, K",180,17,40,4
+1,1.3,Limber Pine,366,"A, B",120,9,50,6
+1,1.3,Lodgepole pine,267,"A, B, C, D, E, F, G, H, I",150,10,50,12
+1,1.3,Engelmann spruce/subalpine fir,"265, 266",C,160,17,80,12
+1,1.3,Engelmann spruce/subalpine fir,"265, 266","D, E",160,17,80,7
+1,1.3,Engelmann spruce/subalpine fir,"265, 266","F, G, H, I",160,13,60,10
+1,1.3,Engelmann spruce/subalpine fir,"265, 266",J,135,13,40,8
+1,1.3,Whitebark pine,367,"D, E, F, G, H, I",150,13,60,11
+1,1.3,Whitebark pine,367,J,135,13,40,7
+1,1.3,Aspen,901,"A, B, C, D, E, F, G, H, I, J",100,12,1,10
+1,1.3,Juniper,"182, 184, 185","A, B, C, D, E, F, G, H, I, J",200,12,1,12

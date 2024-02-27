@@ -1,0 +1,20 @@
+﻿region,National_Forest,Forest_Type_Name,FIA_code,Series,Age,Large_Tree_Diameter,Large_Tree_Density_Per_Acre,Snag_Diameter,Snag_Density_Per_Acre
+10,Chugach,Sitka Spruce - Alluvial,305,,150,16,24,16,3
+10,Chugach,Sitka Spruce - Other,305,,200,13,21,13,4
+10,Chugach,Western Hemlock - well Drained,301,,150,14,28,14,3
+10,Chugach,Western Hemlock - poorly drained,301,,170,10,61,10,16
+10,Chugach,Mountain Hemlock - Hielevation,270,,150,10,24,10,5
+10,Chugach,Mountain Hemlock -low elevation,270,,170,7,58,7,5
+10,Chugach,White Spruce,122,,150,7,37,7,22
+10,Chugach,Black Spruce,125,,200,5,150,5,10
+10,Chugach,Aspen,901,,80,5,73,5,6
+10,Tongass,Sitka Spruce - Alluvial,,PISI,260,27,6,27,2
+10,Tongass,Sitka Spruce - Other,,PISI,160,23,7,23,1
+10,Tongass,Western Hemlock - well Drained,,TSHE,150,19,21,19,2
+10,Tongass,Western Hemlock - poorly drained,,TSHE,180,15,17,15,3
+10,Tongass,Western Hemlock/western redcedar - well Drained,,THPL,170,21,16,21,5
+10,Tongass,Western Hemlock/western redcedar - poorly drained,,THPL,150,19,15,19,3
+10,Tongass,Western hemlock/Alaska yellow cedar,,CHNO,150,15,26,15,3
+10,Tongass,Mixed conifer,,MIXC,170,11,12,11,4
+10,Tongass,Mountain hemlock,,TSME,160,13,12,13,2
+10,Tongass,Shore pine,,PICO,170,9,18,9,2

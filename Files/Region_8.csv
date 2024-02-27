@@ -1,0 +1,17 @@
+﻿region,Forest_Region,FIA_Code,OG_Code,OG_Type,Stand_Age,Stand_Basal_Area,Large_Tree_Diameter,Dead_Trees_Per_Acre,Trees_Per_Acre
+8,8,"517, 800, 801, 805, 962",1,Northern hardwood forest,100,40,14,13,6
+8,8,"104, 105, 123, 124, 400, 401, 902",2,Conifer-northern hardwood forest,140,40,20,6,6
+8,8,"500, 506, 511, 516, 517, 800, 801, 805, 962",5,Mixed mesophytic and western mesophytic forest,140,40,30,4,6
+8,8,"600, 962",6,Coastal plain upland mesic hardwood forest,120,40,24,4,6
+8,8,"600, 608, 700, 708, 809, 962",10,Hardwood wetland forest,120,40,20,0,6
+8,8,"500, 508, 600, 601, 602, 605, 705, 706, 708, 962",13,River floodplain hardwood forest,100,40,16,0,6
+8,8,"607, 609",14,Cypress-tupelo swamp forest,120,40,8,3,6
+8,8,"500, 502, 504, 505, 510, 515, 519, 962",21,Dry-mesic oak forest,130,40,20,26,6
+8,8,"500, 501, 502, 510, 515, 514, 519, 600, 962",22,"Dry and xeric oak forest, woodland, and savanna",90,10,8,10,6
+8,8,"162, 163, 404, 405, 409, 165, 167, 400, 500, 510, 514",24,Xeric pine and pine-oak forest and woodland,100,20,10,6,6
+8,8,"161, 162, 163, 400, 404, 405, 406, 409",25,Dry and dry-mesic oak-pine forest,120,40,19,15,6
+8,8,"141, 400, 403",26,"Upland longleaf and south Florida slash pine forest, woodland, and savanna",80,10,16,0,6
+8,8,"500, 504, 520, 600, 962",27,Seasonally wet oak-hardwood woodland,100,40,20,0,6
+8,8,"600, 700, 702, 703, 704, 705, 709, 962",28,Eastern riverfront forest,100,40,25,6,6
+8,8,"141, 142, 166, 400, 407",29,"Southern wet pine forest, woodland, and savanna",80,10,9,0,6
+8,8,"129, 902",31,Montane and allied spruce and spruce-fir forest,120,40,20,14,6
