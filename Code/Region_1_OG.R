@@ -52,7 +52,7 @@ classify_mog <- function(idx, tree, ccc){
       # Do we have the correct number of live large tree diameters?
       class_LTD = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ),TRUE, FALSE, na=FALSE),
       # Stand basal area
-      class_SBA = fifelse(( BALIVE > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
+      class_SBA = fifelse(( BAA > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
       # are the number of live big trees over what we need for OG?
       class_TPA = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
       class_HTG = fifelse(Group_Code %in% unlist(strsplit(Habitat_Type_Group, ",\\s*")), TRUE, FALSE, na=FALSE),

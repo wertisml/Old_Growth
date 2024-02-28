@@ -35,17 +35,17 @@ classify_mog <- function(idx, tree, ccc){
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
       # Needs to pass having above the threshold of large trees per acre and a basal area per acre
       # Over our threshold. which answers our Stand Basal Area question. 
-      class_SBA = fifelse(( BALIVE > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
+      class_SBA = fifelse(( BAA > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
       # are the number of big trees over what we need for OG, will be used later on
       class_LTD = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ),TRUE, FALSE, na=FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
       class_DTPA = fifelse(( TPA_DEAD > Dead_Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
       Age = STDAGE + (2023-MEASYEAR), 
-      Stand_Basal_Area = BALIVE,
+      Stand_Basal_Area = BAA,
       Dead_Trees_Per_Acre = TPA_DEAD,
       community_abb = OG_Type
       ) %>% 
-    dplyr::select(cuid, contains('class'), num_big_tree_per_acre, Age, Stand_Basal_Area, Dead_Trees_Per_Acre,
+    dplyr::select(cuid, contains('class'), num_big_tree_per_acre, Age, Stand_Basal_Area,BAA, Dead_Trees_Per_Acre,
                   contains('community')) %>%
     ungroup()
   
