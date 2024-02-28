@@ -3,7 +3,7 @@ library(tidyverse)
 library(terra)
 library(sf)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 FS_OG_Regions <- vect("ARC_Vis/OG/FS_Regions_OG.shp")
 

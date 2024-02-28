@@ -3,7 +3,7 @@ library(remotes)
 library(colortools)
 library(tidyverse)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 hex <-  st_read('Files/gpkg/ef_hex.gpkg')
 OG_Forest <- st_read('Files/gpkg/R8_R9_hex_Old_Growth.gpkg')

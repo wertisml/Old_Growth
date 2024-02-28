@@ -5,7 +5,7 @@ library(sf)
 library(data.table)
 library(future)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
 #hex <- st_read('Files/gpkg/ef_hex.gpkg')

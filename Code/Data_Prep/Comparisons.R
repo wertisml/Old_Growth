@@ -5,7 +5,7 @@ table(Jamis_OG %>% filter(REGION == 9) %>% select(class_fia1))
 Jamis_9 <- Jamis_OG %>%
   select(cuid, class_fia1)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 state_table <- read_csv('Files/state_table.csv')
 

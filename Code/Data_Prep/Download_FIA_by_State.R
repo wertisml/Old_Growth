@@ -1,7 +1,7 @@
 library(tidyverse)
 library(rFIA)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 state_table <- read_csv('Files/state_table.csv')
 

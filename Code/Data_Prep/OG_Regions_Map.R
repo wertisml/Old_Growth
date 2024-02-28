@@ -2,7 +2,7 @@ library(terra)
 library(sf)
 library(tidyverse)
 
-setwd("~/MOG/ARC_Vis")
+setwd("~/Old_Growth/ARC_Vis")
 
 Montana <- st_read("County_Boundaries/County_Boundaries.shp")
 Wyoming <- st_read("tl_2023_56_cousub/tl_2023_56_cousub.shp") 

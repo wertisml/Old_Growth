@@ -10,7 +10,7 @@ library(future)
 library(arrow)
 library(progress)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 FS_Region <- 6
 Sub_Region <- ".2"

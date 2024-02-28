@@ -4,7 +4,7 @@ library(arrow)
 library(future)
 library(sf)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 #==============================================================#
 #

@@ -5,7 +5,7 @@ library(rFIA)
 library(data.table)
 library(sf)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 states_list <- read_csv('Files/state_table.csv')
 states <- unique(states_list$STATEAB[states_list$STATEAB %in% states_list$STATEAB])

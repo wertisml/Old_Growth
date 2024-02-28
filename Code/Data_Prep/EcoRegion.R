@@ -2,7 +2,7 @@ library(terra)
 library(tidyverse)
 library(future)
 
-setwd("~/MOG")
+setwd("~/Old_Growth")
 
 hex <- vect('Files/gpkg/conus_hex_epsg6933.gpkg') 
 EcoRegions <- vect("C:/Users/wertisml/Documents/Fire/Shapefiles/EcoRegions/na_cec_eco_l2/NA_CEC_Eco_Level2.shp")
