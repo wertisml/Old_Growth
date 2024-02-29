@@ -7,8 +7,8 @@ library(future)
 
 setwd("~/Old_Growth")
 
-hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
-#hex <- st_read('Files/gpkg/ef_hex.gpkg')
+#hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
+hex <- st_read('Files/gpkg/ef_hex.gpkg')
 
 Regions <- open_dataset("Files/OG_Regions/") %>% 
   #filter(REGION %in% c("08", "09")) %>%

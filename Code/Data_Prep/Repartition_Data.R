@@ -15,7 +15,7 @@ cond <- open_dataset('Files/cond_and_plot.parquet') %>%
   collect() %>%
   data.frame()
 
-FS_OG_Regions <- vect("ARC_Vis/OG/FS_Regions_OG.shp")
+FS_OG_Regions <- vect("Files/gpkg/FS_Regions_OG.shp")
 
 #==============================================================#
 # Add regions to cond
@@ -43,9 +43,28 @@ Cond <- cond %>%
   select(-REGION, -LAT, -LON) %>%
   left_join(result_df, by = "cuid") 
 
+# Capture all the NA REGION values that occur due to poor lat/lon
+na_rows_df <- Cond[is.na(Cond$REGION), , drop = FALSE]
+
+NA_REGION_sf <- Cond %>%
+  filter(is.na(REGION)) %>%
+  select(cuid) %>%
+  left_join(simple_cond, by = 'cuid') %>%
+  vect(geom = c("LON", "LAT"), crs = crs(FS_OG_Regions))
+
+nearest <- st_nearest_feature(st_as_sf(NA_REGION_sf), st_as_sf(FS_OG_Regions))
+
+NA_REGION_sf$REGION <- FS_OG_Regions$REGION[nearest]
+
+Cond <- Cond %>%
+  left_join(NA_REGION_sf %>%
+              as.data.table(),
+            by = "cuid", suffix = c("_df1", "_df2")) %>%
+  mutate(REGION = coalesce(REGION_df2, REGION_df1))
+
 plan(sequential)
 
-write_parquet(Cond, "PLot_and_Cond_Regions.parquet")
+write_parquet(Cond, "Files/PLot_and_Cond_Regions.parquet")
 
 #==============================================================#
 # Combine Tree and Cond
