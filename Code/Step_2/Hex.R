@@ -7,8 +7,8 @@ library(future)
 
 setwd("~/Old_Growth")
 
-#hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
-hex <- st_read('Files/gpkg/ef_hex.gpkg')
+hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
+#hex <- st_read('Files/gpkg/ef_hex.gpkg')
 
 Regions <- open_dataset("Files/OG_Regions/") %>% 
   #filter(REGION %in% c("08", "09")) %>%
@@ -16,9 +16,9 @@ Regions <- open_dataset("Files/OG_Regions/") %>%
   select(cuid, puid, Old_Growth, STATEAB, REGION) %>% 
   collect()
 
-location <- open_dataset('Files/Cond_and_Plot.parquet') %>% 
+location <- open_dataset('Files/PLot_and_Cond_Regions.parquet') %>% 
   select(cuid, LAT, LON, STATEAB, MEASYEAR, CONDPROP_UNADJ, COND_STATUS_CD,
-         FORTYPCD, EMAP_HEX, Fireshed_Code) %>% 
+         FORTYPCD, EMAP_HEX, Fireshed_Code, REGION) %>% 
   filter(STATEAB %in% Regions$STATEAB) %>%
   mutate(puid = str_remove(cuid, "_\\d+$")) %>%
   collect() %>%
@@ -26,7 +26,7 @@ location <- open_dataset('Files/Cond_and_Plot.parquet') %>%
   mutate(forested = fifelse(FORTYPCD == 999, FALSE, TRUE, na=FALSE))
 
 Regions <- Regions %>%
-  right_join(location, by = join_by(cuid, puid, STATEAB))
+  right_join(location, by = join_by(cuid, puid, STATEAB, REGION))
 
 write_parquet(Regions, "Files/Step_2/All_Regions_EMAP_HEX.parquet")
 
@@ -59,10 +59,10 @@ Region_Plot <- open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>%
 #==============================================================================#
 
 source("Code/Map_Color.R")
-hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
-
-#Fire_Shed <- st_read("Files/gpkg/usfs_firesheds_epsg4326.gpkg") %>%
-#  select(Fireshed_Code, OBJECTID)
+# hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') 
+# 
+Fire_Shed <- st_read("Files/gpkg/usfs_firesheds_epsg4326.gpkg") %>%
+  select(Fireshed_Code, OBJECTID)
 
 resHex <- function(data, grid_data, grid_name){
   
@@ -93,7 +93,7 @@ resHex <- function(data, grid_data, grid_name){
 
 }
 
-OG_Forest <- resHex(Region_Plot, hex, grid_name = EMAP_HEX)
+OG_Forest <- resHex(Region_Plot, Fire_Shed, grid_name = Fireshed_Code)
 
 dcr <- div_color_ramp(OG_Forest$OG_RATIO, increments = T,include_all = F, Extreme = F, middle_range = .99)
 plot(OG_Forest['class_f_RATIO'],pal=dcr$cols, breaks=dcr$breaks, border = NA)
@@ -160,26 +160,6 @@ sg <- apply(og_est[,-1], 2, formatC, format='fg', digits=3)
 out <- bind_cols(og_est[1],sg)
 
 write.csv(out, 'Files/Step_2/ogp_estimation.csv', row.names = F, quote=F)
-
-#==============================================================================#
-# Percent Old Growth by Forest Type Group
-#==============================================================================#
-source("Code/Data_Prep/Species_Grouping.R")
-
-Region_Plot <- open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>% 
-  select(FORTYPCD, Old_Growth, EMAP_HEX) %>%
-  collect() %>%
-  left_join(fread('Files/CONUS_hex_epa2_lut.csv'), by='EMAP_HEX') %>%
-  cbind(Forest_Type(., FORTYPCD)) %>%
-  group_by(Group) %>%
-  mutate(ratio_old_growth = sum(Old_Growth == "Old Growth", na.rm=T) / n(),
-         Count = n()) %>%
-  summarise(Percent_Old_Growth = round(mean(ratio_old_growth, na.rm = TRUE)*100, 2),
-            Count = mean(Count))
-  
-
-
-
 
 
 est_og_flavors(Region_Plot %>% 

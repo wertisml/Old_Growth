@@ -5,31 +5,6 @@ library(sf)
 
 setwd("~/Old_Growth")
 
-FS_OG_Regions <- vect("ARC_Vis/OG/FS_Regions_OG.shp")
-
-Regions <- open_dataset("Files/OG_Regions/") %>% # This reads in the whole folder of parquet files
-  # You can do /Region1.1.parquet if you wanted to look at an individual region
-  select(cuid, Old_Growth, STATEAB, REGION, contains("class")) %>% # select the columns you want before reading into memory
-  # You can add filter or some forms of mutate here before collecting.
-  #filter(REGION == "06") %>%
-  collect() # Reads into memory, prior to this you only see the metadata.
-
-location <- open_dataset('Files/cond_and_plot.parquet') %>% 
-  select(cuid, LAT, LON, STATEAB) %>% 
-  filter(STATEAB %in% Regions$STATEAB) %>%
-  collect() %>%
-  distinct(cuid, .keep_all = TRUE) 
-
-Regions_OG <- Regions %>%
-  left_join(location)
-
-cond_sf <- vect(Regions_OG, geom = c("LON", "LAT"), crs = crs(FS_OG_Regions))
-
-OG_Map <- st_join(st_as_sf(cond_sf), st_as_sf(FS_OG_Regions))
-
-plot(OG_Map[2])
-st_write(OG_Map, "ARC_Vis/OG_Plots/Regions.shp")
-
 #=================================================================#
 # Viz points
 #=================================================================#
@@ -81,10 +56,38 @@ open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>%
   summarise(OG = sum(Old_Growth, na.rm=T),
             Forested_Plot = sum(forested, na.rm=T)) %>%
   mutate(Percent_OG = (OG/Forested_Plot)*100,
-         CONUS = sum(OG)/sum(Forested_Plot)*100)
+         CONUS = sum(OG)/sum(Forested_Plot)*100,
+         Total = sum(OG))
+
+#==============================================================================#
+# Percent Old Growth by Forest Type Group
+#==============================================================================#
+
+source("Code/Data_Prep/Species_Grouping.R")
+
+Forest_Group_Breakdown <- open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>% 
+  select(FORTYPCD, Old_Growth, EMAP_HEX) %>%
+  collect() %>%
+  left_join(fread('Files/CONUS_hex_epa2_lut.csv'), by='EMAP_HEX') %>%
+  cbind(Forest_Type(., FORTYPCD)) %>%
+  group_by(Group) %>% #REGION # add in region to get the split by group and region
+  mutate(ratio_old_growth = sum(Old_Growth == "Old Growth", na.rm=T) / n(),
+         Count = n()) %>%
+  summarise(Percent_Old_Growth = round(mean(ratio_old_growth, na.rm = TRUE)*100, 2),
+            Count = mean(Count))
+
+Old_Growth_FORTYPCD_Region <- open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>% 
+  select(FORTYPCD, Old_Growth, REGION) %>%
+  collect() %>%
+  group_by(FORTYPCD, REGION) %>%
+  mutate(ratio_old_growth = sum(Old_Growth == "Old Growth", na.rm=T) / n(),
+         Count = n()) %>%
+  summarise(Percent_Old_Growth = round(mean(ratio_old_growth, na.rm = TRUE)*100, 2),
+            Count = mean(Count))
+
 
 #=====================================================================#
-#
+# Correlation Matrix
 #=====================================================================#
 
 Regions <- open_dataset("Files/OG_Regions/Region6.2.parquet") %>% 

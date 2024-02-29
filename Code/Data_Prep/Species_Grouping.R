@@ -36,6 +36,5 @@ Forest_Type <- function(data, forest_code){
   
   return(out)
 }
-                                                             
-types <- Forest_Type(Region_Plot, FORTYPCD)                                                                                
+                                                                         
                                                                                 

@@ -12,8 +12,8 @@ library(progress)
 
 setwd("~/Old_Growth")
 
-FS_Region <- 6
-Sub_Region <- ".2"
+FS_Region <- 8
+Sub_Region <- ""
 
 cond <- open_dataset('Files/PLot_and_Cond_Regions.parquet') %>% 
   filter(REGION == paste0("0",FS_Region,Sub_Region),

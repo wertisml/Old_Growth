@@ -17,6 +17,14 @@ cond <- open_dataset('Files/cond_and_plot.parquet') %>%
 
 FS_OG_Regions <- vect("Files/gpkg/FS_Regions_OG.shp")
 
+Fire_Shed <- st_read("Files/gpkg/usfs_firesheds_epsg4326.gpkg") %>%
+  select(Fireshed_Code, geom) %>%
+  vect()
+
+EMAP <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg') %>%
+  select(EMAP_HEX, geom) %>%
+  vect()
+
 #==============================================================#
 # Add regions to cond
 #==============================================================#
@@ -40,12 +48,10 @@ result_df <- result %>%
 
 Cond <- cond %>% 
   distinct(cuid, .keep_all = TRUE) %>%
-  select(-REGION, -LAT, -LON) %>%
+  select(-REGION) %>%
   left_join(result_df, by = "cuid") 
 
 # Capture all the NA REGION values that occur due to poor lat/lon
-na_rows_df <- Cond[is.na(Cond$REGION), , drop = FALSE]
-
 NA_REGION_sf <- Cond %>%
   filter(is.na(REGION)) %>%
   select(cuid) %>%
@@ -56,11 +62,49 @@ nearest <- st_nearest_feature(st_as_sf(NA_REGION_sf), st_as_sf(FS_OG_Regions))
 
 NA_REGION_sf$REGION <- FS_OG_Regions$REGION[nearest]
 
+# Fix the missing EMAP locations similar to REGION
+
+na_EMAP_HEX <- Cond %>% 
+  filter(is.na(EMAP_HEX)) %>% 
+  select(cuid, LAT, LON) %>%
+  st_as_sf(., coords=c('LON','LAT'), remove=F, crs=st_crs(4326)) %>% 
+  st_transform(6933) %>%
+  vect()
+
+nearest <- st_nearest_feature(st_as_sf(na_EMAP_HEX), st_as_sf(EMAP))
+
+na_EMAP_HEX$EMAP_HEX <- EMAP$EMAP_HEX[nearest]
+
+# Fix the missing Fire Shed locations similar to REGION
+sf_use_s2(FALSE)
+
+na_Fire_Shed <- Cond %>% 
+  filter(is.na(Fireshed_Code)) %>% 
+  select(cuid, LAT, LON) %>%
+  vect(geom = c("LON", "LAT"), crs = crs(Fire_Shed))
+
+nearest <- st_nearest_feature(st_as_sf(na_Fire_Shed), st_as_sf(Fire_Shed))
+
+na_Fire_Shed$Fireshed_Code <- Fire_Shed$Fireshed_Code[nearest]
+
+# Join everythign back together
 Cond <- Cond %>%
+  left_join(na_Fire_Shed %>%
+              as.data.table(),
+            by = "cuid", suffix = c("_df1", "_df2")) %>%
+  mutate(Fireshed_Code = coalesce(Fireshed_Code_df2, Fireshed_Code_df1)) %>%
+  select(-Fireshed_Code_df2, -Fireshed_Code_df1) %>%
   left_join(NA_REGION_sf %>%
               as.data.table(),
             by = "cuid", suffix = c("_df1", "_df2")) %>%
-  mutate(REGION = coalesce(REGION_df2, REGION_df1))
+  mutate(REGION = coalesce(REGION_df2, REGION_df1)) %>%
+  select(-REGION_df2, -REGION_df1) %>%
+  left_join(na_EMAP_HEX %>%
+              as.data.table() %>%
+              select(-LAT, -LON),
+            by = "cuid", suffix = c("_df1", "_df2")) %>%
+  mutate(EMAP_HEX = coalesce(EMAP_HEX_df2, EMAP_HEX_df1)) %>%
+  select(-EMAP_HEX_df2, -EMAP_HEX_df1)
 
 plan(sequential)
 
