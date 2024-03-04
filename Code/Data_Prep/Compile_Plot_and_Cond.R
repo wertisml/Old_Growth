@@ -83,7 +83,7 @@ for(i in 1:length(states)){
                    col_select = c("STATECD", "UNITCD", "COUNTYCD", "PLOT",
                                   "CONDID", "INVYR", "STDAGE", "FORTYPCD",
                                   "PLT_CN", "CN", "PHYSCLCD", "SITECLCD",
-                                  "ADFORCD", "HABTYPCD1", "ADFORCD",
+                                  "ADFORCD", "HABTYPCD1",
                                   "HABTYPCD1_PUB_CD", "CONDPROP_UNADJ",
                                   "COND_STATUS_CD", "BALIVE")) %>%
     mutate(cuid = paste(STATECD, UNITCD, COUNTYCD, PLOT, CONDID, sep = "_"),

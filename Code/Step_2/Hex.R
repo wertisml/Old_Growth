@@ -17,7 +17,7 @@ Regions <- open_dataset("Files/OG_Regions/") %>%
   collect()
 
 location <- open_dataset('Files/PLot_and_Cond_Regions.parquet') %>% 
-  select(cuid, LAT, LON, STATEAB, MEASYEAR, CONDPROP_UNADJ, COND_STATUS_CD,
+  select(cuid, PLT_CN, LAT, LON, STATEAB, MEASYEAR, CONDPROP_UNADJ, COND_STATUS_CD,
          FORTYPCD, EMAP_HEX, Fireshed_Code, REGION) %>% 
   filter(STATEAB %in% Regions$STATEAB) %>%
   mutate(puid = str_remove(cuid, "_\\d+$")) %>%

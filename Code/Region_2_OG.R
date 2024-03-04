@@ -41,17 +41,17 @@ classify_mog <- function(idx, tree, ccc){
     ) %>% 
     left_join(x=ccc,y=., by='cuid') %>%  
     mutate(# Calculates the stand age
-      class_SA = fifelse(( STDAGE + (2023-MEASYEAR) > Stand_Age ), TRUE,  FALSE),
+      class_SA = fifelse(( STDAGE + (2023-MEASYEAR) >= Stand_Age ), TRUE,  FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
       # Needs to pass having above the threshold of large trees per acre and a basal area per acre
       # Over our threshold. which answers our Stand Basal Area question. 
       class_C = fifelse(( cull_over_threshold >= Cull_or_Broken_Top_Per_Acre ), TRUE, FALSE),
       # are the number of large tree diameters over what we need for OG
-      class_LTD = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ),TRUE, FALSE),
+      class_LTD = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ),TRUE, FALSE),
       # are the number of large trees over what we need for OG
-      class_NLT = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ),TRUE, FALSE),
+      class_NLT = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ),TRUE, FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
-      class_DTPA = fifelse(( num_big_dead_tree_per_acre > Dead_Trees_Per_Acre), TRUE, FALSE),
+      class_DTPA = fifelse(( num_big_dead_tree_per_acre >= Dead_Trees_Per_Acre), TRUE, FALSE),
       Age = STDAGE + (2023-MEASYEAR), 
       Cull_Per_Acre = cull_over_threshold,
       Dead_Trees_Per_Acre = num_big_dead_tree_per_acre,

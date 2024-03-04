@@ -12,8 +12,8 @@ library(progress)
 
 setwd("~/Old_Growth")
 
-FS_Region <- 8
-Sub_Region <- ""
+FS_Region <- 1
+Sub_Region <- ".2"
 
 cond <- open_dataset('Files/PLot_and_Cond_Regions.parquet') %>% 
   filter(REGION == paste0("0",FS_Region,Sub_Region),
@@ -33,6 +33,9 @@ Region <- function(Region_Number){
 
 Region(FS_Region)
 
+cond <- cond %>% 
+  filter(cuid %in% No_OG$cuid)
+
 #==============================================================================#
 #
 #==============================================================================#
@@ -40,14 +43,14 @@ Region(FS_Region)
 plan(multisession, workers = 12)
 
 tt <- open_dataset("Files/Trees.parquet") %>%
-  filter(PLT_CN %in% cond$PLT_CN) %>%
+  filter(cuid %in% cond$cuid) %>%
   collect() %>%
   mutate(Status = ifelse(STATUSCD == 1, "Live", 
                          ifelse(STATUSCD == 2, "Dead", NA)),
          Downed_Dead = ifelse(STANDING_DEAD_CD == 0, "Downed", 
                               ifelse(STANDING_DEAD_CD == 1, "Standing", "Live")),
          BA = (DIA * abs(DIA) * 0.005454)) %>% # is this calculated correctly?
-  dplyr::select(-STATUSCD, -STANDING_DEAD_CD) 
+  dplyr::select(-STATUSCD, -STANDING_DEAD_CD, -TOTAGE) 
 
   # function to classify cond based on X number of trees larger than Y inches and Z stand age
   classify_cond <- function(x,tree){
@@ -90,8 +93,6 @@ pb <- progress_bar$new(
 res <- lapply(X=cond$cuid, FUN=classify_cond, tree=tt) %>% 
   rbindlist(fill = TRUE) %>% 
   data.frame()
-
-pb$terminate()
 
 out <- cond %>% 
   left_join(res, by='cuid') %>%

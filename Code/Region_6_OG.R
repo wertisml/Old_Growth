@@ -9,8 +9,8 @@ n_big_tpa <- function(tree, big_tree_size){
 
 n_big_dtpa <- function(tree, dead_tree_size){ 
   
-  tpa <- tree %>% filter(Status == "Dead") %>% ungroup() %>% select(TPA_UNADJ)
-  dead <- tree %>% filter(Status == "Dead") %>% ungroup() %>% select(DIA)
+  tpa <- tree %>% filter(Downed_Dead == "Standing") %>% ungroup() %>% select(TPA_UNADJ)
+  dead <- tree %>% filter(Downed_Dead == "Standing") %>% ungroup() %>% select(DIA)
   
   sum(coalesce(tpa[dead >= dead_tree_size], 0), na.rm = TRUE)
   

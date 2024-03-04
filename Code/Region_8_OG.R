@@ -9,6 +9,14 @@ n_big_tpa <- function(tree, big_tree_size){
   
 }
 
+tpa_dead <- function(tree){ 
+  
+  tpa <- tree %>% filter(Status == "Live") %>% ungroup() %>% select(TPA_UNADJ)
+  
+  sum(coalesce(tpa$TPA_UNADJ, 0), na.rm = TRUE)
+  
+}
+
 # function to classify OG for Region 8
 classify_mog <- function(idx, tree, ccc){
   
@@ -21,7 +29,8 @@ classify_mog <- function(idx, tree, ccc){
   
   tree %>% 
     summarise( # Determines the diameter of the tree and how many big trees per acre there are 
-      num_big_tree_per_acre = n_big_tpa(tree=., big_tree_size = defs$Large_Tree_Diameter[idx])
+      num_big_tree_per_acre = n_big_tpa(tree=., big_tree_size = defs$Large_Tree_Diameter[idx]),
+      TPA_DEAD = tpa_dead(tree)
     ) %>% 
     left_join(tree %>% 
                 filter(DIA >= 5, Status == "Live") %>% 
@@ -29,13 +38,14 @@ classify_mog <- function(idx, tree, ccc){
                 group_by(cuid) %>%
                 summarise(BAA = sum(BAA)),
               by='cuid') %>%
-    left_join(x=ccc,y=., by='cuid') %>% 
+    left_join(x=ccc %>% select(-TPA_DEAD),y=., by='cuid') %>% 
     mutate(# Calculates the stand age
       class_SA = fifelse(( STDAGE + (2023-MEASYEAR) > Stand_Age ), TRUE,  FALSE, na=FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
       # Needs to pass having above the threshold of large trees per acre and a basal area per acre
       # Over our threshold. which answers our Stand Basal Area question. 
       class_SBA = fifelse(( BAA > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
+      #class_SBA_2 = fifelse(( BALIVE > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
       # are the number of big trees over what we need for OG, will be used later on
       class_LTD = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ),TRUE, FALSE, na=FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
@@ -45,7 +55,7 @@ classify_mog <- function(idx, tree, ccc){
       Dead_Trees_Per_Acre = TPA_DEAD,
       community_abb = OG_Type
       ) %>% 
-    dplyr::select(cuid, contains('class'), num_big_tree_per_acre, Age, Stand_Basal_Area,BAA, Dead_Trees_Per_Acre,
+    dplyr::select(cuid, contains('class'), num_big_tree_per_acre, Age, Stand_Basal_Area, Dead_Trees_Per_Acre,
                   contains('community')) %>%
     ungroup()
   

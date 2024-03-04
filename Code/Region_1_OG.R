@@ -3,12 +3,6 @@ HabTyp_Group <- function(data){
 
   data %>%
     select(HABTYPCD1, PLT_CN, HABTYPCD1_PUB_CD, REGION) %>%
-    # left_join(read_csv("Files/REF_HABTYP_DESCRIPTION.csv") %>% 
-    #             select(HABTYPCD, SCIENTIFIC_NAME, PUB_CD) %>%
-    #             mutate(PUB_CD = PUB_CD,
-    #                    SCIENTIFIC_NAME = str_replace_all(SCIENTIFIC_NAME, "\\d", "")),
-    #           by = c("HABTYPCD1" = "HABTYPCD",
-    #                  "HABTYPCD1_PUB_CD" = "PUB_CD")) %>%
     left_join(read_csv("Files/R1_HabTyp.csv") %>%
                 filter(as.numeric(REGION) == as.numeric(data$REGION)) %>%
                 mutate(Habitat_Code = as.character(Numeric_Code)),
@@ -48,18 +42,18 @@ classify_mog <- function(idx, tree, ccc){
     left_join(x=ccc,y=., by='cuid') %>% 
     left_join(HabTyp_Group(ccc),y=.,by="PLT_CN") %>%
     mutate(# Calculates the stand age
-      class_SA = fifelse(( STDAGE + (2023-MEASYEAR) > Stand_Age ), TRUE,  FALSE, na=FALSE),
+      class_SA = fifelse(( STDAGE + (2023-MEASYEAR) >= Stand_Age ), TRUE,  FALSE, na=FALSE),
       # Do we have the correct number of live large tree diameters?
-      class_LTD = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ),TRUE, FALSE, na=FALSE),
+      class_LTD = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ),TRUE, FALSE, na=FALSE),
       # Stand basal area
-      class_SBA = fifelse(( BAA > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
+      class_SBA = fifelse(( BAA >= Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
       # are the number of live big trees over what we need for OG?
-      class_TPA = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
+      class_TPA = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
       class_HTG = fifelse(Group_Code %in% unlist(strsplit(Habitat_Type_Group, ",\\s*")), TRUE, FALSE, na=FALSE),
       Age = STDAGE + (2023-MEASYEAR), 
       Trees_Per_Acre = num_big_tree_per_acre,
       community_abb = OG_Type ) %>% 
-    dplyr::select(cuid, contains('class'), Age, Trees_Per_Acre, Scientific_Name,
+    dplyr::select(cuid, contains('class'), Age, BAA, Trees_Per_Acre, Group_Code,
                   contains('community')) %>%
     ungroup()
   

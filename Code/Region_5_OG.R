@@ -29,7 +29,7 @@ classify_mog <- function(idx, tree, ccc){
       # Stand basal area
       site_productivity_num = site_height * (0.25489 + (29.377 / (STDAGE + (2023-MEASYEAR)))),
       site_productivity = fifelse(site_productivity_num < 45, "Low", "Productive"),
-      class_SP = fifelse(( site_productivity == Site_Productivity ), TRUE, FALSE, na=FALSE),
+      class_SP = fifelse( site_productivity %in% unlist(strsplit(Site_Productivity, ",\\s*")), TRUE, FALSE, na=FALSE),
       # are the number of live big trees over what we need for OG?
       class_TPA = fifelse(( num_big_tree_per_acre > Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
       class_Eco = fifelse(is.na(ECOSUBCD) & is.na(Habitat_Type_Group), TRUE,
@@ -38,7 +38,7 @@ classify_mog <- function(idx, tree, ccc){
       Age = STDAGE + (2023-MEASYEAR), 
       Trees_Per_Acre = num_big_tree_per_acre,
       community_abb = OG_Type ) %>% 
-    dplyr::select(cuid, contains('class'), Age, Trees_Per_Acre, site_productivity_num,
+    dplyr::select(cuid, contains('class'), Age, Trees_Per_Acre, site_productivity,
                   contains('community')) %>%
     ungroup()
   

@@ -57,7 +57,8 @@ open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>%
             Forested_Plot = sum(forested, na.rm=T)) %>%
   mutate(Percent_OG = (OG/Forested_Plot)*100,
          CONUS = sum(OG)/sum(Forested_Plot)*100,
-         Total = sum(OG))
+         Total_OG = sum(OG),
+         Total = sum(Forested_Plot))
 
 #==============================================================================#
 # Percent Old Growth by Forest Type Group

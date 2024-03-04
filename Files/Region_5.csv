@@ -1,5 +1,5 @@
 ﻿region,Forest_Region,OG_Type,FIA_Code,Site,Large_Tree_Diameter,Trees_Per_Acre,Age,ECOSUBCD
-5,5,Coast Redwood,341,All,40,15,0,
+5,5,Coast Redwood,341,"Productive, Low",40,15,0,
 5,5,Conifer Mixed Forests,"371, 226, 361",Productive,39,6,188,
 5,5,Conifer Mixed Forests,"371, 226, 361",Low,29,5,256,
 5,5,White Fir (NWFP area),261,Productive,30,5,160,
@@ -14,7 +14,7 @@
 5,5,Mixed Subalpine (Western White Pine Association),"241, 342, 365, 366, 367",Low,30,10,200,
 5,5,Mixed Subalpine (Mountain Hemlock Association),270,Productive,30,12,150,
 5,5,Mixed Subalpine (Mountain Hemlock Association),270,Low,30,6,200,
-5,5,Mixed Subalpine (Western Juniper Association),369,All,30,5,200,
+5,5,Mixed Subalpine (Western Juniper Association),369,"Productive, Low",30,5,200,
 5,5,Mixed Subalpine (Quaking Aspen Association) aspen,901,Productive,18,5,80,
 5,5,Mixed Subalpine (Quaking Aspen Association) conifer,901,Productive,30,5,80,
 5,5,Mixed Subalpine (Quaking Aspen Association) aspen,901,Low,18,1,80,
@@ -27,4 +27,4 @@
 5,5,Lodgepole Pine,281,Low,36,4,200,
 5,5,Interior Ponderosa Pine,221,Productive,21,19,150,"ECOSUBCD %in% c(M261G*, 342B*, M261Ea, M261Eb, M261Ec, M261Ei, M261Ej, M261D*)"
 5,5,Interior Ponderosa Pine,221,Low,21,16,200,"ECOSUBCD %in% c(M261G*, 342B*, M261Ea, M261Eb, M261Ec, M261Ei, M261Ej, M261D*)"
-5,5,Pacific Ponderosa Pine,221,All,30,9,125,
+5,5,Pacific Ponderosa Pine,221,"Productive, Low",30,9,125,
