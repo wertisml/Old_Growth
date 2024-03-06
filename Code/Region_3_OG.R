@@ -11,11 +11,11 @@ SDI <- function(tree, SDI_Diameter){
   SDI_18 <- tree %>% filter(Status == "Live", DIA >= SDI_Diameter) %>% ungroup() %>% 
     mutate(BAA = BA * TPA_UNADJ,
            QMD = sqrt(((BAA)/TPA_UNADJ)/0.005454),
-           SDI_18 = TPA_UNADJ * (QMD/18)**1.605) %>%
+           SDI_18 = TPA_UNADJ * (QMD/10)**1.605) %>%
     select(SDI_18, QMD, BAA) %>%
     summarise(SDI_18 = sum(SDI_18))
   
-  SDI_10 <- tree %>% filter(Status == "Live", DIA >= 10) %>% ungroup() %>% 
+  SDI_10 <- tree %>% filter(Status == "Live") %>% ungroup() %>% 
     mutate(BAA = BA * TPA_UNADJ,
            QMD = sqrt(((BAA)/TPA_UNADJ)/0.005454),
            SDI_10 = TPA_UNADJ * (QMD/10)**1.605) %>%

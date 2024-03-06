@@ -11,12 +11,13 @@ FS_OG_Regions <- vect("ARC_Vis/OG/FS_Regions_OG.shp")
 USFS_OG <- read_csv("Files/Step_2/MOG_Master_Plot_List_v9.csv") %>%
   mutate(MOG = fifelse(MOG == 1, 1, 0, na=0))
 
-Region_Plot <- open_dataset("Files/Step_2/All_Regions_EMAP_HEX.parquet") %>% 
+Region_Plot <- open_dataset("Files/OG_Regions/") %>% 
+  select(Old_Growth, cuid, PLT_CN, REGION, puid) %>%
   collect() %>%
+  as.data.table() %>%
   mutate(CONDID = as.numeric(str_extract(cuid, "(?<=_)[^_]+$")),
          Old_Growth = fifelse(Old_Growth == "Old Growth", 1, 0, na=0))
-  
-plan(sequential)
+
 
 # Non of the missing cuid data occurs in any of the PLOT information 
 National_Forest <- USFS_OG %>%
@@ -35,6 +36,8 @@ Filter <- National_Forest %>%
 No_OG <- Filter %>%
   filter(MOG == 1)
 
+No_MOG <- Filter %>%
+  filter(Old_Growth == 1)
 
 table(Filter$Old_Growth, Filter$MOG)
 

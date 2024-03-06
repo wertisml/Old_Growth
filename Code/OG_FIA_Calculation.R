@@ -12,8 +12,8 @@ library(progress)
 
 setwd("~/Old_Growth")
 
-FS_Region <- 1
-Sub_Region <- ".2"
+FS_Region <- 3
+Sub_Region <- ""
 
 cond <- open_dataset('Files/PLot_and_Cond_Regions.parquet') %>% 
   filter(REGION == paste0("0",FS_Region,Sub_Region),
@@ -33,9 +33,6 @@ Region <- function(Region_Number){
 
 Region(FS_Region)
 
-cond <- cond %>% 
-  filter(cuid %in% No_OG$cuid)
-
 #==============================================================================#
 #
 #==============================================================================#
@@ -50,7 +47,7 @@ tt <- open_dataset("Files/Trees.parquet") %>%
          Downed_Dead = ifelse(STANDING_DEAD_CD == 0, "Downed", 
                               ifelse(STANDING_DEAD_CD == 1, "Standing", "Live")),
          BA = (DIA * abs(DIA) * 0.005454)) %>% # is this calculated correctly?
-  dplyr::select(-STATUSCD, -STANDING_DEAD_CD, -TOTAGE) 
+  dplyr::select(-STATUSCD, -STANDING_DEAD_CD) 
 
   # function to classify cond based on X number of trees larger than Y inches and Z stand age
   classify_cond <- function(x,tree){
