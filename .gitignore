@@ -48,6 +48,9 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# File types
+*.tif
+
 # Ignore this entire directory
 Files/old/
 Files/Old_Iterations/
