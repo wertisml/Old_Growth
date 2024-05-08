@@ -1,0 +1,52 @@
+"","V1","GROUP","VARIABLE","COR","OG.PERC","PERC.100","PLOTS","WALKDOWN","MATURE.CUT"
+"1",0,"R8 Conifer southern hardwood","Stand_Age",1,86.5,152,111,0.8,69.2
+"2",0,"R8 Conifer southern hardwood","QMDdom",0.56,10.91,24.87,111,0.8,8.73
+"3",0,"R8 Conifer southern hardwood","HTsd",0.49,13.37,37.88,111,0.8,10.69
+"4",0,"R8 Conifer southern hardwood","ddiscore",0.45,30,60,111,0.8,24
+"7",0,"R8 Longleaf pine","Stand_Age",1,84,152,367,0.88,73.92
+"8",0,"R8 Longleaf pine","QMDdom",0.6,11.2,27,367,0.88,9.86
+"9",0,"R8 Longleaf pine","HTsd",0.5,12.45,45.76,367,0.88,10.95
+"10",0,"R8 Longleaf pine","ddiscore",0.49,25.95,60,367,0.88,22.83
+"11",0,"R8 Longleaf pine","HTquart",0.47,55.9,129,367,0.88,49.19
+"13",0,"R8 Pines - Conifers","Stand_Age",1,84,143,305,0.87,73.08
+"14",0,"R8 Pines - Conifers","QMDdom",0.65,11.13,27,305,0.87,9.68
+"15",0,"R8 Pines - Conifers","ddiscore",0.51,25.77,60,305,0.87,22.42
+"16",0,"R8 Pines - Conifers","HTquart",0.49,59.11,129,305,0.87,51.43
+"17",0,"R8 Pines - Conifers","HTsd",0.49,11.34,45.76,305,0.87,9.87
+"18",0,"R8 southern hardwoods","Stand_Age",1,96,210,1241,0.79,75.84
+"19",0,"R8 southern hardwoods","QMDdom",0.56,12.68,45,1238,0.79,10.02
+"20",0,"R8 southern hardwoods","ddiscore",0.49,30,92.79,1241,0.79,23.7
+"21",0,"R8 southern hardwoods","HTsd",0.47,15.81,44.41,1241,0.79,12.49
+"22",0,"R8 Oaks","Stand_Age",1,95,210,1032,0.76,72.2
+"23",0,"R8 Oaks","QMDdom",0.56,12.58,36.8,1029,0.76,9.56
+"24",0,"R8 Oaks","ddiscore",0.47,30,92.79,1032,0.76,22.8
+"25",0,"R8 Oaks","HTsd",0.45,15.63,44.41,1032,0.76,11.88
+"26",0,"R9 oak","Stand_Age",1,106,231,431,0.82,86.92
+"27",0,"R9 oak","QMDdom",0.52,14.57,38.5,430,0.82,11.94
+"28",0,"R9 oak","ddiscore",0.45,33.08,82.84,431,0.82,27.13
+"29",0,"R9 oak","HTsd",0.39,14.45,43.52,431,0.82,11.85
+"30",0,"R9 oak","HTquart",0.35,54.03,145,431,0.82,44.3
+"32",0,"R9 northern hardwood","Stand_Age",1,106,231,587,0.74,78.44
+"33",0,"R9 northern hardwood","QMDdom",0.58,13.6,38.5,585,0.74,10.06
+"34",0,"R9 northern hardwood","HTsd",0.46,14.49,43.52,587,0.74,10.73
+"35",0,"R9 northern hardwood","HTquart",0.41,53.34,145,587,0.74,39.47
+"37",0,"R9 Conifer northern hardwood","Stand_Age",1,107,329,420,0.82,87.74
+"38",0,"R9 Conifer northern hardwood","QMDdom",0.6,12.94,34.12,418,0.82,10.61
+"39",0,"R9 Conifer northern hardwood","HTsd",0.51,14.64,36.75,420,0.82,12.01
+"40",0,"R9 Conifer northern hardwood","HTquart",0.46,52.05,124.67,420,0.82,42.68
+"41",0,"R9 Conifer northern hardwood","snagbatot",0.24,1.4,111.96,420,0.82,1.14
+"43",0,"R9 Northern pine","Stand_Age",1,107,329,393,0.85,90.95
+"44",0,"R9 Northern pine","QMDdom",0.61,12.96,34.12,391,0.85,11.02
+"45",0,"R9 Northern pine","HTsd",0.5,14.61,36.75,393,0.85,12.42
+"46",0,"R9 Northern pine","HTquart",0.45,52.82,124.67,393,0.85,44.9
+"47",0,"R9 Northern pine","snagbatot",0.24,1.35,111.96,393,0.85,1.15
+"49",0,"R9 Spruce / fir group","Stand_Age",1,111,218,249,0.74,82.14
+"50",0,"R9 Spruce / fir group","QMDdom",0.37,9.49,20.25,249,0.74,7.02
+"51",0,"R9 Spruce / fir group","HTsd",0.33,10.5,23.39,249,0.74,7.77
+"52",0,"R9 Spruce / fir group","HTquart",0.27,38.81,84,249,0.74,28.72
+"6",0,"R8 Conifer southern hardwood","tpadom",-0.25,65.95,549.35,111,0.8,82.44
+"12",0,"R8 Longleaf pine","tpadom",-0.28,54.16,1547.45,367,0.88,61.55
+"31",0,"R9 oak","tpadom",-0.26,48.14,318.29,431,0.82,58.71
+"36",0,"R9 northern hardwood","tpadom",-0.33,48.14,397.19,587,0.74,65.06
+"42",0,"R9 Conifer northern hardwood","tpadom",-0.21,66.2,624.02,420,0.82,80.73
+"48",0,"R9 Northern pine","tpadom",-0.22,72.22,624.02,393,0.85,84.96

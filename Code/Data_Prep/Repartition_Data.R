@@ -122,10 +122,10 @@ Trees <- list.files(path = "Files/rFIA/",
                     full.names = T)
 
 combined_data <- lapply(Trees, function(file) {
-  read_csv(file, col_select = c("PLT_CN", "STATECD", "UNITCD", "COUNTYCD",
+  read_csv(file, col_select = c("CN" ,"PLT_CN", "STATECD", "UNITCD", "COUNTYCD",
                                 "PLOT", "CONDID", "DIA", "TPA_UNADJ",
                                 "CULL", "SPCD", "HT", "STANDING_DEAD_CD", 
-                                "STATUSCD", "INVYR", "TREE", "TOTAGE"))}) %>%
+                                "STATUSCD", "INVYR", "TREE", "TOTAGE", "CCLCD"))}) %>%
   bind_rows() %>%
   mutate(cuid = paste(STATECD, UNITCD, COUNTYCD, PLOT, CONDID, sep = "_")) %>%
   select(-STATECD, -UNITCD, -COUNTYCD, -PLOT, -CONDID)

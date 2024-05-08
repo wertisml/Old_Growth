@@ -1,6 +1,8 @@
 library(arrow)
 library(tidyverse)
 library(future)
+library(terra)
+library(data.table)
 
 setwd("~/Old_Growth")
 
@@ -12,12 +14,11 @@ USFS_OG <- read_csv("Files/Step_2/MOG_Master_Plot_List_v9.csv") %>%
   mutate(MOG = fifelse(MOG == 1, 1, 0, na=0))
 
 Region_Plot <- open_dataset("Files/OG_Regions/") %>% 
-  select(Old_Growth, cuid, PLT_CN, REGION, puid) %>%
+  dplyr::select(Old_Growth, cuid, PLT_CN, REGION, puid, EMAP_HEX) %>%
   collect() %>%
   as.data.table() %>%
   mutate(CONDID = as.numeric(str_extract(cuid, "(?<=_)[^_]+$")),
          Old_Growth = fifelse(Old_Growth == "Old Growth", 1, 0, na=0))
-
 
 # Non of the missing cuid data occurs in any of the PLOT information 
 National_Forest <- USFS_OG %>%
@@ -25,13 +26,18 @@ National_Forest <- USFS_OG %>%
             by = c("PLT_CN", "CONDID")) %>%
   filter(!is.na(cuid))
 
+#====================================================================#
+# Filter data by region
+#====================================================================#
 
 #table(National_Forest$Old_Growth, National_Forest$MOG)
 
 Filter <- National_Forest %>%
-  filter(REGION == "03",
+  filter(REGION == "09",
          Old_Growth != MOG) %>%
   select(cuid, puid, MOG, Old_Growth)
+
+table(Filter$Old_Growth, Filter$MOG)
 
 No_OG <- Filter %>%
   filter(MOG == 1)
@@ -39,7 +45,7 @@ No_OG <- Filter %>%
 No_MOG <- Filter %>%
   filter(Old_Growth == 1)
 
-table(Filter$Old_Growth, Filter$MOG)
+
 
 
 
@@ -149,4 +155,38 @@ OG_Forest$dif <- dif
 dcr <- div_color_ramp(OG_Forest$dif, include_all =F, Extreme = T, hot_col = 'mediumseagreen', cold_col = 'violet', middle_range = .99)
 plot(OG_Forest['dif'],pal=dcr$cols, breaks=dcr$breaks, border = NA)
 
+#====================================================================#
+# Segment by shapefile
+#====================================================================#
 
+file <- list.files(path = "Files/gpkg/Neil/",
+           pattern = ".gpkg")
+
+USFS_OG <- read_csv("Files/Step_2/MOG_Master_Plot_List_v9.csv") %>%
+  mutate(MOG = ifelse(MOG == 1, MOG, NA)) %>% 
+  drop_na()
+
+Plots <- open_dataset("Files/PLot_and_Cond_Regions.parquet") %>%
+  dplyr::select(LON, LAT, cuid, PLT_CN, puid) %>%
+  mutate(Lon = LON,
+         Lat = LAT) %>%
+  collect() %>%
+  as.data.table() %>%
+  mutate(CONDID = as.numeric(str_extract(cuid, "(?<=_)[^_]+$")))
+
+# Non of the missing cuid data occurs in any of the PLOT information 
+National_Forest <- USFS_OG %>%
+  left_join(Plots, 
+            by = c("PLT_CN", "CONDID")) %>%
+  filter(!is.na(cuid))
+
+for(i in 1:length(file)){
+  
+Boundary <- vect(paste0("Files/gpkg/Neil/", file[i]))
+
+National_Forest_sf <- vect(National_Forest, geom = c("LON", "LAT"), crs = crs(Boundary))
+
+sf_crop <- terra::crop(National_Forest_sf, Boundary)
+
+writeVector(sf_crop, paste0("Files/gpkg/Neil/Output/",file[i]), overwrite = T)
+}

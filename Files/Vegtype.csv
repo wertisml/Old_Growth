@@ -1,0 +1,323 @@
+fgroupname,Vegtype
+Alder / maple group,R1 Hardwoods
+Aspen / birch group,R1 Hardwoods
+Elm / ash / cottonwood group,R1 Hardwoods
+Douglas-fir group,R1 Douglas fir
+Fir / spruce / mountain hemlock group,R1 Fir / spruce / mountain hemlock group
+Woodland hardwoods group,R1 Hardwoods
+Hemlock / Sitka spruce group,R1 Hemlock / Sitka spruce group
+Lodgepole pine group,R1 Lodgepole Pine
+Oak / hickory group,R1 Hardwoods
+Other western softwoods group,R1 Pinyon Juniper - Western Softwoods
+Pinyon / juniper group,R1 Pinyon Juniper - Western Softwoods
+Ponderosa pine group,R1 Ponderosa Pine
+Western larch group,R1 Western larch group
+Western white pine group,R1 Fir / spruce / mountain hemlock group
+Aspen / birch group,R10 Sitka Spruce - Alluvial
+Spruce / fir group,R10 Black Spruce
+Fir / spruce / mountain hemlock group,R10 Mixed conifer
+Hemlock / Sitka spruce group,R10 Mixed conifer
+Lodgepole pine group,R10 Mixed conifer
+Fir / spruce / mountain hemlock group,R10 Mountain hemlock
+Hemlock / Sitka spruce group,R10 Mountain hemlock
+Lodgepole pine group,R10 Mountain hemlock
+Hemlock / Sitka spruce group,R10 Sitka Spruce - Alluvial
+Elm / ash / cottonwood group,R10 Sitka Spruce - Alluvial
+Fir / spruce / mountain hemlock group,R10 Sitka Spruce - Alluvial
+Alder / maple group,R10 Sitka Spruce - Alluvial
+Hemlock / Sitka spruce group,R10 Sitka Spruce - Other
+Fir / spruce / mountain hemlock group,R10 Sitka Spruce - Other
+Alder / maple group,R10 Sitka Spruce - Other
+Elm / ash / cottonwood group,R10 Sitka Spruce - Other
+Lodgepole pine group,R10 Sitka Spruce - Other
+Aspen / birch group,R10 Sitka Spruce - Other
+Lodgepole pine group,R10 Western Hemlock - poorly Drained
+Alder / maple group,R10 Western Hemlock - poorly Drained
+Elm / ash / cottonwood group,R10 Western Hemlock - poorly Drained
+Hemlock / Sitka spruce group,R10 Western Hemlock - poorly Drained
+Fir / spruce / mountain hemlock group,R10 Western Hemlock - poorly Drained
+Hemlock / Sitka spruce group,R10 Western Hemlock - well Drained
+Fir / spruce / mountain hemlock group,R10 Western Hemlock - well Drained
+Lodgepole pine group,R10 Western Hemlock - well Drained
+Alder / maple group,R10 Western Hemlock - well Drained
+Elm / ash / cottonwood group,R10 Western Hemlock - well Drained
+Hemlock / Sitka spruce group,R10 Western Hemlock / Alaska yellow cedar
+Fir / spruce / mountain hemlock group,R10 Western Hemlock / Alaska yellow cedar
+Lodgepole pine group,R10 Western Hemlock / Alaska yellow cedar
+Hemlock / Sitka spruce group,R10 Western Hemlock / western red cedar
+Lodgepole pine group,R10 Western Hemlock / western red cedar
+Fir / spruce / mountain hemlock group,R10 Western Hemlock / western red cedar
+Alder / maple group,R10 Western Hemlock / western red cedar
+Spruce / fir group,R10 White spruce
+Elm / ash / cottonwood group,R10 White spruce
+Aspen / birch group,R10 White spruce
+Aspen / birch group,R2 Aspen / Cottonwood / Oaks
+Elm / ash / cottonwood group,R2 Aspen / Cottonwood / Oaks
+Douglas-fir group,R2 Douglas fir
+Woodland hardwoods group,R2 Gambel Oak
+Lodgepole pine group,R2 Lodgepole Pine
+Oak / hickory group,R2 Aspen / Cottonwood / Oaks
+Other eastern softwoods group,R2 Other Western Softwoods
+Other hardwoods group,R2 Aspen / Cottonwood / Oaks
+Other western softwoods group,R2 Other Western Softwoods
+Pinyon / juniper group,R2 Pinyon-Juniper
+Ponderosa pine group,R2 Ponderosa Pine
+Fir / spruce / mountain hemlock group,R2 Spruce / Fir
+Spruce / fir group,R2 Spruce / Fir
+Woodland hardwoods group,R3 Hardwoods
+Other western softwoods group,R3 Mixed Conifer w/ Aspen
+Douglas-fir group,R3 Spruce - Fir
+Pinyon / juniper group,R3 Juniper Grass
+Woodland hardwoods group,R3 Juniper Grass
+Other hardwoods group,R3 Juniper Grass
+Woodland hardwoods group,R3 Madrean Encinal Woodland
+Pinyon / juniper group,R3 Madrean Encinal Woodland
+Pinyon / juniper group,R3 Madrean Pinyon-Oak
+Woodland hardwoods group,R3 Madrean Pinyon-Oak
+Douglas-fir group,R3 Mixed Conifer -- Frequent Fire
+Woodland hardwoods group,R3 Mixed Conifer -- Frequent Fire
+Ponderosa pine group,R3 Mixed Conifer -- Frequent Fire
+Pinyon / juniper group,R3 Mixed Conifer -- Frequent Fire
+Fir / spruce / mountain hemlock group,R3 Mixed Conifer -- Frequent Fire
+Other western softwoods group,R3 Mixed Conifer -- Frequent Fire
+Aspen / birch group,R3 Mixed Conifer -- Frequent Fire
+Other eastern softwoods group,R3 Mixed Conifer -- Frequent Fire
+Oak / hickory group,R3 Mixed Conifer -- Frequent Fire
+Elm / ash / cottonwood group,R3 Mixed Conifer -- Frequent Fire
+Aspen / birch group,R3 Mixed Conifer w/ Aspen
+Douglas-fir group,R3 Mixed Conifer w/ Aspen
+Woodland hardwoods group,R3 Mixed Conifer w/ Aspen
+Ponderosa pine group,R3 Mixed Conifer w/ Aspen
+Fir / spruce / mountain hemlock group,R3 Mixed Conifer w/ Aspen
+Pinyon / juniper group,R3 Mixed Conifer w/ Aspen
+Elm / ash / cottonwood group,R3 Hardwoods
+Pinyon / juniper group,R3 Hardwoods
+Pinyon / juniper group,R3 PJ Shrub - Woodland
+Elm / ash / cottonwood group,R3 PJ Shrub - Woodland
+Woodland hardwoods group,R3 PJ Shrub - Woodland
+Other hardwoods group,R3 PJ Shrub - Woodland
+Other western softwoods group,R3 PJ Shrub - Woodland
+Pinyon / juniper group,R3 PJ Grass - Sagebrush
+Woodland hardwoods group,R3 PJ Grass - Sagebrush
+Pinyon / juniper group,R3 Ponderosa Pine - Mixed
+Ponderosa pine group,R3 Ponderosa Pine - Mixed
+Woodland hardwoods group,R3 Ponderosa Pine - Mixed
+Fir / spruce / mountain hemlock group,R3 Ponderosa Pine - Mixed
+Elm / ash / cottonwood group,R3 Ponderosa Pine - Mixed
+Ponderosa pine group,R3 Ponderosa Pine
+Pinyon / juniper group,R3 Ponderosa Pine
+Woodland hardwoods group,R3 Ponderosa Pine
+Other western softwoods group,R3 Ponderosa Pine
+Aspen / birch group,R3 Ponderosa Pine
+Ponderosa pine group,R3 Spruce - Fir
+Fir / spruce / mountain hemlock group,R3 Spruce - Fir
+Aspen / birch group,R3 Spruce - Fir
+Other western softwoods group,R3 Spruce - Fir
+Woodland hardwoods group,R3 Spruce - Fir
+Other hardwoods group,R3 Hardwoods
+Aspen / birch group,R3 Hardwoods
+Aspen / birch group,R4 Aspen-Dry
+Aspen / birch group,R4 Aspen-Mesic
+Fir / spruce / mountain hemlock group,R4 Engelmann spruce
+Other western softwoods group,R4 Bristlecone / Limber / Whitebark Pines
+California mixed conifer group,R4 Engelmann spruce
+Fir / spruce / mountain hemlock group,R4 Douglas fir
+California mixed conifer group,R4 Douglas fir
+Douglas-fir group,R4 Douglas fir
+Elm / ash / cottonwood group,R4 Elm / ash / cottonwood
+Lodgepole pine group,R4 Lodgepole Pine
+Other hardwoods group,R4 Pinyon Juniper NW - Others
+Other western softwoods group,R4 Pinyon Juniper NW - Others
+Pinyon / juniper group,R4 Pinyon Juniper NW - Others
+Pinyon / juniper group,R4 Pinyon-Juniper-SE-High
+Pinyon / juniper group,R4 Pinyon-Juniper-SE-Low
+Ponderosa pine group,R4 Ponderosa Pine
+Western larch group,R4 Douglas fir
+Woodland hardwoods group,R4 Pinyon Juniper NW - Others
+Alder / maple group,R5 R6 Hardwoods
+Redwood group,R5 Pacific Conifers
+California mixed conifer group,R5 Mixed Conifer
+Other western softwoods group,R5 Mixed Conifer
+Ponderosa pine group,R5 Mixed Conifer
+Tanoak / laurel group,R5 Douglas-fir/Tanoak/Madrone
+Elm / ash / cottonwood group,R5 R6 Hardwoods
+Ponderosa pine group,R5 Jeffrey Pine
+Lodgepole pine group,R5 Mixed Conifer
+Fir / spruce / mountain hemlock group,R5 Mixed Conifer
+Aspen / birch group,R5 R6 Hardwoods
+Other western softwoods group,R5 R6 Pinyon Juniper - Western Softwoods
+Western white pine group,R5 Mixed Conifer
+Redwood group,R5 Mixed Conifer
+Other hardwoods group,R5 R6 Hardwoods
+Douglas-fir group,R5 Pacific Conifers
+Ponderosa pine group,R5 Pacific Conifers
+Pinyon / juniper group,R5 R6 Pinyon Juniper - Western Softwoods
+Fir / spruce / mountain hemlock group,R5 Red Fir
+Tanoak / laurel group,R5 R6 Hardwoods
+Western oak group,R5 R6 Hardwoods
+Fir / spruce / mountain hemlock group,R5 White Fir
+Woodland hardwoods group,R5 R6 Hardwoods
+Lodgepole pine group,R6 Silver Fir
+Fir / spruce / mountain hemlock group,R6 Silver Fir
+Alder / maple group,R6 Silver Fir
+Ponderosa pine group,R6 Silver Fir
+Other western softwoods group,R6 Silver Fir
+Ponderosa pine group,R6 Douglas-fir (eastside)
+Douglas-fir group,R6 Douglas-fir (eastside)
+Fir / spruce / mountain hemlock group,R6 Douglas-fir (eastside)
+Other western softwoods group,R6 Douglas-fir (eastside)
+Lodgepole pine group,R6 Douglas-fir (eastside)
+Other hardwoods group,R6 Douglas-fir (eastside)
+Western larch group,R6 Douglas-fir (eastside)
+Aspen / birch group,R6 Douglas-fir (eastside)
+Elm / ash / cottonwood group,R6 Douglas-fir (eastside)
+Aspen / birch group,R6 Douglas-Fir (NWFP)
+Douglas-fir group,R6 Douglas-Fir (NWFP)
+Ponderosa pine group,R6 Douglas-Fir (NWFP)
+Tanoak / laurel group,R6 Douglas-Fir (NWFP)
+Elm / ash / cottonwood group,R6 Douglas-Fir (NWFP)
+Alder / maple group,R6 Douglas-Fir (NWFP)
+Western white pine group,R6 Douglas-Fir (NWFP)
+Lodgepole pine group,R6 Douglas-Fir (NWFP)
+Other hardwoods group,R6 Douglas-Fir (NWFP)
+Western oak group,R6 Douglas-Fir (NWFP)
+Fir / spruce / mountain hemlock group,R6 Douglas-Fir (NWFP)
+California mixed conifer group,R6 Douglas-Fir (NWFP)
+Other western softwoods group,R6 Douglas-Fir (NWFP)
+Fir / spruce / mountain hemlock group,R6 Mountain Hemlock
+Ponderosa pine group,R5 R6 Hardwoods
+Fir / spruce / mountain hemlock group,R5 R6 Hardwoods
+Ponderosa pine group,R6 Ponderosa Pine - Lodgepole Pine
+Douglas-fir group,R6 Ponderosa Pine - Lodgepole Pine
+Tanoak / laurel group,R6 Ponderosa Pine - Lodgepole Pine
+Other western softwoods group,R6 Ponderosa Pine - Lodgepole Pine
+Western white pine group,R6 Ponderosa Pine - Lodgepole Pine
+Alder / maple group,R6 Ponderosa Pine - Lodgepole Pine
+Lodgepole pine group,R6 Ponderosa Pine - Lodgepole Pine
+Aspen / birch group,R6 Ponderosa Pine - Lodgepole Pine
+Western larch group,R6 Ponderosa Pine - Lodgepole Pine
+Lodgepole pine group,R6 Mountain Hemlock
+Other western softwoods group,R6 Mountain Hemlock
+Douglas-fir group,R6 Mountain Hemlock
+Hemlock / Sitka spruce group,R6 Mountain Hemlock
+Tanoak / laurel group,R6 Mountain Hemlock
+Western larch group,R6 Mountain Hemlock
+Ponderosa pine group,R6 Mountain Hemlock
+Other hardwoods group,R6 Mountain Hemlock
+Western oak group,R6 Ponderosa Pine - Lodgepole Pine
+Other hardwoods group,R6 Ponderosa Pine - Lodgepole Pine
+Ponderosa pine group,R6 Ponderosa pine (very late decadent)
+Lodgepole pine group,R6 Ponderosa pine (very late decadent)
+Other western softwoods group,R6 Ponderosa pine (very late decadent)
+Douglas-fir group,R6 Ponderosa pine (very late decadent)
+Fir / spruce / mountain hemlock group,R6 Ponderosa pine (very late decadent)
+Aspen / birch group,R6 Ponderosa pine (very late decadent)
+Western larch group,R6 Ponderosa pine (very late decadent)
+Other hardwoods group,R6 Ponderosa pine (very late decadent)
+Pinyon / juniper group,R6 Ponderosa pine (very late decadent)
+Douglas-fir group,R6 Port Orford cedar - redwood
+Tanoak / laurel group,R6 Port Orford cedar - redwood
+Ponderosa pine group,R6 Port Orford cedar - redwood
+Lodgepole pine group,R6 Port Orford cedar - redwood
+Alder / maple group,R6 Port Orford cedar - redwood
+Hemlock / Sitka spruce group,R6 Port Orford cedar - redwood
+Douglas-fir group,R6 Silver Fir
+Hemlock / Sitka spruce group,R6 Silver Fir
+Tanoak / laurel group,R6 Silver Fir
+Elm / ash / cottonwood group,R6 Silver Fir
+Other hardwoods group,R6 Silver Fir
+Western larch group,R6 Silver Fir
+Western white pine group,R6 Silver Fir
+Hemlock / Sitka spruce group,R6 Sitka Spruce
+Lodgepole pine group,R6 Sitka Spruce
+Alder / maple group,R6 Sitka Spruce
+Elm / ash / cottonwood group,R6 Sitka Spruce
+Douglas-fir group,R6 Sitka Spruce
+Fir / spruce / mountain hemlock group,R6 Sitka Spruce
+Fir / spruce / mountain hemlock group,R6 Subalpine fir
+Western larch group,R6 Subalpine fir
+Douglas-fir group,R6 Subalpine fir
+Lodgepole pine group,R6 Subalpine fir
+Ponderosa pine group,R6 Subalpine fir
+Other western softwoods group,R6 Subalpine fir
+Aspen / birch group,R6 Subalpine fir
+Alder / maple group,R6 Subalpine fir
+Hemlock / Sitka spruce group,R6 Subalpine fir
+Lodgepole pine group,R6 Subalpine Fir - Engelmann Spruce
+Douglas-fir group,R6 Subalpine Fir - Engelmann Spruce
+Fir / spruce / mountain hemlock group,R6 Subalpine Fir - Engelmann Spruce
+Other western softwoods group,R6 Subalpine Fir - Engelmann Spruce
+Ponderosa pine group,R6 Subalpine Fir - Engelmann Spruce
+Aspen / birch group,R6 Subalpine Fir - Engelmann Spruce
+Western larch group,R6 Subalpine Fir - Engelmann Spruce
+Other hardwoods group,R6 Subalpine Fir - Engelmann Spruce
+Tanoak / laurel group,R6 Tanoak
+Douglas-fir group,R6 Tanoak
+Alder / maple group,R6 Tanoak
+Western oak group,R6 Tanoak
+Other hardwoods group,R6 Tanoak
+Ponderosa pine group,R6 Tanoak
+Douglas-fir group,R6 Western hemlock
+Aspen / birch group,R6 Western hemlock
+Western larch group,R6 Western hemlock
+Hemlock / Sitka spruce group,R6 Western hemlock
+Fir / spruce / mountain hemlock group,R6 Western hemlock
+Lodgepole pine group,R6 Western hemlock
+Elm / ash / cottonwood group,R6 Western hemlock
+Other western softwoods group,R6 Western hemlock
+Alder / maple group,R6 Western hemlock
+Ponderosa pine group,R6 Western hemlock
+Western oak group,R6 Western hemlock
+Tanoak / laurel group,R6 Western hemlock
+Other hardwoods group,R6 Western hemlock
+Western white pine group,R6 Western hemlock
+Douglas-fir group,R6 White / Grand fir
+Ponderosa pine group,R6 White / Grand fir
+Lodgepole pine group,R6 White / Grand fir
+Fir / spruce / mountain hemlock group,R6 White / Grand fir
+Tanoak / laurel group,R6 White / Grand fir
+Other hardwoods group,R6 White / Grand fir
+California mixed conifer group,R6 White / Grand fir
+Alder / maple group,R6 White / Grand fir
+Western larch group,R6 White / Grand fir
+Western oak group,R6 White / Grand fir
+Western white pine group,R6 White / Grand fir
+Other western softwoods group,R6 White / Grand fir
+Aspen / birch group,R6 White / Grand fir
+Elm / ash / cottonwood group,R6 White / Grand fir
+Hemlock / Sitka spruce group,R6 White / Grand fir
+Woodland hardwoods group,R6 White / Grand fir
+Pinyon / juniper group,R6 White / Grand fir
+Oak / gum / cypress group,R8 southern hardwoods
+Maple / beech / birch group,R8 southern hardwoods
+Oak / hickory group,R8 southern hardwoods
+Oak / hickory group,R8 Oaks
+Elm / ash / cottonwood group,R8 southern hardwoods
+White / red / jack pine group,R8 Conifer southern hardwood
+Other eastern softwoods group,R8 Conifer southern hardwood
+Oak / pine group,R8 Conifer southern hardwood
+White / red / jack pine group,R8 Pines - Conifers
+Loblolly / shortleaf pine group,R8 Pines - Conifers
+Longleaf / slash pine group,R8 Longleaf pine
+Oak / pine group,R8 Longleaf pine
+Tropical hardwoods group,R8 Wet and rain forest
+Other hardwoods group,R8 southern hardwoods
+Aspen / birch group,R8 southern hardwoods
+Spruce / fir group,R8 Pines - Conifers
+Longleaf / slash pine group,R8 Pines - Conifers
+Aspen / birch group,R9 northern hardwood
+Maple / beech / birch group,R9 northern hardwood
+Oak / pine group,R9 Conifer northern hardwood
+White / red / jack pine group,R9 Conifer northern hardwood
+Oak / hickory group,R9 oak
+Oak / pine group,R9 oak
+Loblolly / shortleaf pine group,R9 oak
+Exotic softwoods group,R9 Northern pine
+Loblolly / shortleaf pine group,R9 Northern pine
+Spruce / fir group,R9 Spruce / fir group
+Oak / hickory group,R9 northern hardwood
+White / red / jack pine group,R9 Northern pine
+Oak / gum / cypress group,R9 northern hardwood
+Other eastern softwoods group,R9 Northern pine
+Other hardwoods group,R9 northern hardwood
+Elm / ash / cottonwood group,R9 northern hardwood

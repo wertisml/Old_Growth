@@ -48,9 +48,14 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# File types
+*.tif
+
 # Ignore this entire directory
 Files/old/
 Files/Old_Iterations/
 Files/rFIA/
 /Files/Trees.parquet
 /ARC_Vis
+Files/FIGGS/
+Files/gpkg/Appalachian_NLCD.tif

@@ -1,0 +1,287 @@
+﻿Vegetation Class,Walkdown,Indicators,Correlation,Threshold,Weight
+R1 Douglas fir,0.86,ddiscore,0.41,32.18,0.28
+,,badom,0.39,82.49,0.27
+,,QMDdom,0.39,10.31,0.27
+,,HTquart,0.26,48.22,0.18
+R1 Fir / spruce / mountain hemlock group,0.8,ddiscore,0.52,24,0.44
+,,HTsd,0.35,49.52,0.3
+,,HTquart,0.31,38.89,0.26
+R1 Hardwoods,0.77,ddiscore,0.61,22.39,0.31
+,,badom,0.56,58.83,0.28
+,,HTquart,0.53,36.84,0.27
+,,HTsd,0.28,27.03,0.14
+R1 Hemlock / Sitka spruce group,0.86,ddiscore,0.64,44.99,0.38
+,,HTsd,0.47,69.17,0.28
+,,HTquart,0.34,68.79,0.2
+,,tpadom,-0.22,83.98,0.13
+R1 Lodgepole Pine,0.49,HTquart,0.58,25.3,0.28
+,,ddiscore,0.54,14.62,0.26
+,,badom,0.53,44.84,0.26
+,,HTsd,0.39,23.9,0.19
+R1 Pinyon Juniper - Western Softwoods,0.8,ddiscore,0.61,24,0.3
+,,HTquart,0.52,28.74,0.25
+,,QMDdom,0.5,6.98,0.25
+,,HTsd,0.41,29.51,0.2
+R1 Ponderosa Pine,0.83,ddiscore,0.55,30.66,0.36
+,,QMDdom,0.53,12.62,0.34
+,,HTsd,0.46,39.94,0.3
+R1 Western larch group,0.93,QMDdom,0.65,15.82,0.31
+,,ddiscore,0.65,52.95,0.31
+,,HTsd,0.43,80.68,0.21
+,,tpadom,-0.34,69.02,0.16
+R10 Black Spruce,0.74,HTsd,0.54,8.59,0.43
+,,tpadom,0.32,13.36,0.26
+,,snagbatot,-0.39,6.39,0.31
+R10 Mixed conifer,0.71,ddiscore,0.51,21.3,0.58
+,,snagbatot,0.37,16.6,0.42
+R10 Mountain hemlock,0.71,HTsd,0.43,29.74,0.32
+,,QMDdom,0.34,6.19,0.25
+,,snagbatot,0.31,8.48,0.23
+,,badom,0.27,60.08,0.2
+R10 Sitka Spruce - Alluvial,0.69,QMDdom,0.68,8.19,0.38
+,,snagbatot,0.52,3.78,0.29
+,,HTsd,0.35,32.93,0.2
+,,tpadom,-0.24,87.22,0.13
+R10 Sitka Spruce - Other,0.82,ddiscore,0.44,45.32,0.29
+,,HTsd,0.36,57.21,0.24
+,,badom,0.28,123.12,0.18
+,,HTquart,0.2,48.71,0.13
+,,tpadom,-0.24,80.73,0.16
+R10 Western Hemlock - poorly Drained,0.72,ddiscore,0.62,15.77,0.59
+,,snagbatot,0.43,18.58,0.41
+R10 Western Hemlock - well Drained,0.86,QMDdom,0.66,12.97,0.55
+,,snagbatot,0.26,20.12,0.22
+,,tpadom,-0.28,48.99,0.23
+R10 Western Hemlock / Alaska yellow cedar,0.82,HTsd,0.5,47.14,0.37
+,,badom,0.49,92.59,0.36
+,,snagbatot,0.36,25.09,0.27
+R10 Western Hemlock / western red cedar,0.71,ddiscore,0.4,42.6,0.27
+,,snagbatot,0.32,35.46,0.21
+,,HTsd,0.23,48.98,0.15
+,,HTquart,0.2,35.22,0.13
+,,tpadom,-0.35,118.66,0.23
+R10 White spruce,0.66,HTquart,0.58,25.32,0.7
+,,HTsd,0.25,21.12,0.3
+R2 Aspen / Cottonwood / Oaks,0.62,HTquart,0.67,34.44,0.31
+,,ddiscore,0.59,18.6,0.27
+,,badom,0.56,55.62,0.26
+,,HTsd,0.33,23.73,0.15
+R2 Douglas fir,0.86,ddiscore,0.48,35.11,0.3
+,,badom,0.33,66.9,0.21
+,,HTquart,0.28,38.79,0.18
+,,QMDdom,0.27,9.32,0.17
+,,snagbatot,0.24,23.63,0.15
+R2 Gambel Oak,0.8,badom,0.32,25.39,0.3
+,,ddiscore,0.26,8,0.25
+,,HTquart,0.25,10.63,0.24
+,,QMDdom,0.22,2.88,0.21
+R2 Lodgepole Pine,0.49,QMDdom,0.6,3.76,0.46
+,,badom,0.5,34.12,0.38
+,,HTsd,0.2,18.82,0.15
+R2 Other Western Softwoods,0.8,ddiscore,0.69,24,0.32
+,,QMDdom,0.61,6.63,0.29
+,,HTquart,0.51,28.43,0.24
+,,HTsd,0.33,21.03,0.15
+R2 Pinyon-Juniper,0.8,ddiscore,0.51,32.92,0.55
+,,QMDdom,0.42,8.79,0.45
+R2 Ponderosa Pine,0.83,QMDdom,0.42,11.88,0.33
+,,ddiscore,0.35,31.71,0.28
+,,HTsd,0.27,38.89,0.21
+,,badom,0.23,67.3,0.18
+R2 Spruce / Fir ,0.79,ddiscore,0.57,31.04,0.31
+,,badom,0.51,87.14,0.27
+,,HTquart,0.45,44.27,0.24
+,,HTsd,0.33,45.74,0.18
+R3 Hardwoods,0.77,QMDdom,0.64,3.41,0.34
+,,ddiscore,0.63,7.7,0.34
+,,HTquart,0.37,10.98,0.2
+,,tpadom,-0.22,78.16,0.12
+R3 Juniper Grass,0.8,QMDdom,0.59,10.67,0.3
+,,HTquart,0.54,11.2,0.27
+,,ddiscore,0.53,19,0.27
+,,HTsd,0.33,3.76,0.17
+R3 Madrean Encinal Woodland,0.8,QMDdom,0.6,8.76,0.36
+,,HTquart,0.49,14.86,0.3
+,,ddiscore,0.3,16.76,0.18
+,,tpadom,-0.26,56.42,0.16
+R3 Madrean Pinyon-Oak,0.8,QMDdom,0.49,8.36,0.32
+,,HTquart,0.43,14.26,0.28
+,,ddiscore,0.35,23.82,0.23
+,,HTsd,0.24,10.26,0.16
+R3 Mixed Conifer -- Frequent Fire,0.82,ddiscore,0.61,21.45,0.41
+,,QMDdom,0.56,13.27,0.37
+,,HTsd,0.33,44.84,0.22
+R3 Mixed Conifer w/ Aspen,0.76,ddiscore,0.73,34.57,0.39
+,,HTsd,0.45,41.51,0.24
+,,HTquart,0.4,36.36,0.22
+,,snagbatot,-0.28,15,0.15
+R3 PJ Grass - Sagebrush,0.8,ddiscore,0.6,19.57,0.29
+,,QMDdom,0.55,9.5,0.26
+,,HTquart,0.54,12.8,0.26
+,,HTsd,0.39,6.1,0.19
+R3 PJ Shrub - Woodland,0.78,ddiscore,0.51,20.17,0.46
+,,QMDdom,0.38,9.2,0.34
+,,HTquart,0.23,13,0.21
+R3 Ponderosa Pine  ,0.81,ddiscore,0.46,24.3,0.45
+,,badom,0.29,40.02,0.28
+,,QMDdom,0.28,13.49,0.27
+R3 Ponderosa Pine - Mixed,0.81,ddiscore,0.63,32.39,0.5
+,,QMDdom,0.41,8.98,0.32
+,,HTsd,0.23,24.07,0.18
+R3 Spruce - Fir,0.75,ddiscore,0.57,32.44,0.24
+,,HTsd,0.51,51.67,0.22
+,,QMDdom,0.44,11.39,0.19
+,,HTquart,0.44,43.31,0.19
+,,badom,0.41,57.37,0.17
+R4 Aspen-Dry,0.51,badom,0.67,22.55,0.33
+,,ddiscore,0.62,12.03,0.3
+,,HTquart,0.53,16.73,0.26
+,,HTsd,0.22,14.64,0.11
+R4 Aspen-Mesic,0.51,HTquart,0.68,28.81,0.39
+,,ddiscore,0.65,15.3,0.37
+,,HTsd,0.42,16.55,0.24
+R4 Bristlecone / Limber / Whitebark Pines,0.8,QMDdom,0.62,9.76,0.39
+,,badom,0.54,77.19,0.34
+,,HTquart,0.43,26.4,0.27
+R4 Douglas fir,0.82,ddiscore,0.41,33,0.43
+,,QMDdom,0.32,11.06,0.34
+,,HTquart,0.22,40.42,0.23
+R4 Elm / ash / cottonwood,0.74,badom,0.46,56.39,0.42
+,,ddiscore,0.43,20.67,0.39
+,,HTsd,0.21,15.1,0.19
+R4 Engelmann spruce,0.8,ddiscore,0.55,29.77,0.32
+,,QMDdom,0.46,8.27,0.27
+,,HTquart,0.4,35.19,0.23
+,,HTsd,0.3,57.65,0.18
+R4 Lodgepole Pine,0.49,ddiscore,0.62,14.7,0.3
+,,HTquart,0.55,23.53,0.26
+,,badom,0.54,41.77,0.26
+,,HTsd,0.37,17.97,0.18
+R4 Pinyon Juniper NW - Others,0.8,ddiscore,0.57,24,0.42
+,,QMDdom,0.54,8,0.39
+,,tpadom,-0.26,90.27,0.19
+R4 Pinyon-Juniper-SE-High,0.8,QMDdom,0.47,9.23,0.52
+,,ddiscore,0.44,32.92,0.48
+R4 Pinyon-Juniper-SE-Low,0.8,ddiscore,0.4,24,0.56
+,,QMDdom,0.32,8.35,0.44
+R4 Ponderosa Pine,0.83,QMDdom,0.54,14.21,0.38
+,,ddiscore,0.31,32.5,0.22
+,,HTquart,0.3,49.06,0.21
+,,HTsd,0.27,50.31,0.19
+R5 Douglas-fir/Tanoak/Madrone,0.8,ddiscore,0.57,53.26,0.45
+,,QMDdom,0.37,14.77,0.29
+,,tpadom,-0.32,76.54,0.25
+R5 Jeffrey Pine,0.83,QMDdom,0.52,10.34,0.52
+,,ddiscore,0.25,30.83,0.25
+,,HTsd,0.23,31.17,0.23
+R5 Mixed Conifer,0.75,QMDdom,0.4,12.99,0.62
+,,ddiscore,0.25,42.04,0.38
+R5 Pacific Conifers,0.83,ddiscore,0.55,52.61,0.4
+,,QMDdom,0.48,25.27,0.35
+,,snagbatot,0.36,2.68,0.26
+R5 R6 Hardwoods,0.75,ddiscore,0.56,39.15,0.58
+,,QMDdom,0.41,6.97,0.42
+R5 R6 Pinyon Juniper - Western Softwoods,0.8,QMDdom,0.38,14.18,0.54
+,,ddiscore,0.32,30.87,0.46
+R5 Red Fir,0.79,ddiscore,0.52,49.23,0.32
+,,QMDdom,0.46,19.51,0.28
+,,HTquart,0.38,67.03,0.23
+,,HTsd,0.27,46.25,0.17
+R5 White Fir,0.79,ddiscore,0.4,47.46,0.31
+,,QMDdom,0.4,16.61,0.31
+,,badom,0.27,150.02,0.21
+,,snagbatot,0.2,24.85,0.16
+R6 Douglas-fir (eastside),0.78,QMDdom,0.43,11.02,0.53
+,,ddiscore,0.38,30.69,0.47
+R6 Douglas-Fir (NWFP),0.79,QMDdom,0.6,13.14,0.36
+,,ddiscore,0.45,34.17,0.27
+,,HTsd,0.31,44.75,0.19
+,,badom,0.3,77.07,0.18
+R6 Mountain Hemlock,0.79,QMDdom,0.58,12.82,0.29
+,,badom,0.4,123.2,0.2
+,,HTsd,0.4,57.82,0.2
+,,HTquart,0.37,41.83,0.19
+,,tpadom,-0.23,78.34,0.12
+R6 Ponderosa Pine - Lodgepole Pine,0.78,QMDdom,0.43,7.43,0.33
+,,ddiscore,0.36,15.16,0.28
+,,HTsd,0.29,33.11,0.22
+,,tpadom,-0.21,22.5,0.16
+R6 Ponderosa pine (very late decadent),0.71,QMDdom,0.4,8.69,0.43
+,,ddiscore,0.3,23.32,0.33
+,,tpadom,-0.22,55.06,0.24
+R6 Port Orford cedar - redwood,0.74,ddiscore,0.46,44.4,0.47
+,,QMDdom,0.28,13,0.29
+,,tpadom,-0.23,59.5,0.24
+R6 Silver Fir,0.83,QMDdom,0.62,16.64,0.29
+,,HTsd,0.42,71.82,0.2
+,,badom,0.41,160.22,0.19
+,,snagbatot,0.38,39.19,0.18
+,,tpadom,-0.31,53.11,0.14
+R6 Sitka Spruce,0.85,QMDdom,0.57,20.97,0.3
+,,HTsd,0.41,65.58,0.22
+,,badom,0.38,184.97,0.2
+,,snagbatot,0.25,55.43,0.13
+,,tpadom,-0.27,37.94,0.14
+R6 Subalpine fir,0.78,ddiscore,0.55,27.65,0.4
+,,HTquart,0.44,40.52,0.32
+,,HTsd,0.4,41.56,0.29
+R6 Subalpine Fir - Engelmann Spruce,0.74,ddiscore,0.39,31.81,0.42
+,,QMDdom,0.33,8.78,0.35
+,,HTsd,0.21,40.13,0.23
+R6 Tanoak,0.82,QMDdom,0.6,15.56,0.29
+,,ddiscore,0.5,54.13,0.24
+,,HTquart,0.33,50.68,0.16
+,,HTsd,0.32,63.9,0.15
+,,tpadom,-0.33,55.3,0.16
+R6 Western hemlock,0.79,QMDdom,0.64,19.85,0.33
+,,badom,0.38,153.96,0.2
+,,snagbatot,0.32,25.62,0.17
+,,HTsd,0.32,63.26,0.17
+,,tpadom,-0.27,42.03,0.14
+R6 White / Grand fir,0.78,QMDdom,0.51,12.27,0.33
+,,ddiscore,0.48,40.1,0.31
+,,HTsd,0.3,47.16,0.2
+,,snagbatot,0.24,8.58,0.16
+R8 Conifer southern hardwood,0.8,QMDdom,0.41,8.32,0.42
+,,HTquart,0.27,39.5,0.28
+,,tpadom,-0.29,111.58,0.3
+R8 Longleaf pine,0.88,QMDdom,0.61,10.24,0.31
+,,ddiscore,0.45,18.96,0.23
+,,HTsd,0.24,24.08,0.12
+,,badom,0.23,44.67,0.12
+,,tpadom,-0.45,54.7,0.23
+R8 Oaks,0.76,QMDdom,0.46,9.65,0.3
+,,ddiscore,0.42,22.8,0.28
+,,HTquart,0.33,43.99,0.22
+,,badom,0.31,55.69,0.2
+R8 Pines - Conifers,0.93,QMDdom,0.57,11.37,0.38
+,,HTquart,0.29,66.15,0.19
+,,HTsd,0.25,38.81,0.17
+,,tpadom,-0.39,60.4,0.26
+R8 southern hardwoods,0.8,ddiscore,0.5,29.33,0.31
+,,HTquart,0.41,43.63,0.26
+,,badom,0.35,58.5,0.22
+,,HTsd,0.33,47.4,0.21
+R8 Wet and rain forest,NA,NA,NA,NA,NA
+R9 Conifer northern hardwood,0.82,QMDdom,0.63,12.71,0.3
+,,badom,0.47,88.32,0.22
+,,snagbatot,0.39,12.63,0.18
+,,HTsd,0.28,47.31,0.13
+,,tpadom,-0.34,73.39,0.16
+R9 northern hardwood,0.74,QMDdom,0.67,9.94,0.29
+,,HTquart,0.46,36.41,0.2
+,,badom,0.41,51.9,0.18
+,,HTsd,0.35,48.65,0.15
+,,tpadom,-0.42,67.86,0.18
+R9 Northern pine,0.85,QMDdom,0.65,10.85,0.3
+,,HTsd,0.48,51.93,0.22
+,,HTquart,0.44,32.25,0.2
+,,badom,0.2,72.41,0.09
+,,tpadom,-0.4,66.08,0.18
+R9 oak,0.82,QMDdom,0.57,11.78,0.37
+,,HTquart,0.33,51.14,0.21
+,,HTsd,0.31,35.96,0.2
+,,tpadom,-0.35,73.39,0.22
+R9 Spruce / fir group,0.74,ddiscore,0.36,22.2,0.4
+,,badom,0.32,77.49,0.36
+,,HTquart,0.22,30.96,0.24

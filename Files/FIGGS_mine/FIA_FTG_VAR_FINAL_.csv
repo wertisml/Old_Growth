@@ -1,0 +1,69 @@
+"","GROUP","VARIABLE","COR","NUM.PLOTS"
+"2","Longleaf / slash pine group","QMDdom",0.67,6272
+"3","Longleaf / slash pine group","ddiscore",0.52,6272
+"4","Longleaf / slash pine group","HTsd",0.48,6272
+"5","Longleaf / slash pine group","tpadom",-0.39,6272
+"21","Loblolly / shortleaf pine group","QMDdom",0.62,15874
+"31","Loblolly / shortleaf pine group","ddiscore",0.5,15874
+"41","Loblolly / shortleaf pine group","HTsd",0.46,15874
+"51","Loblolly / shortleaf pine group","HTquart",0.42,15874
+"22","Oak / hickory group","QMDdom",0.56,71586
+"32","Oak / hickory group","ddiscore",0.45,71586
+"42","Oak / hickory group","HTsd",0.42,71586
+"52","Oak / hickory group","HTquart",0.38,71586
+"23","Other hardwoods group","QMDdom",0.63,790
+"33","Other hardwoods group","ddiscore",0.58,790
+"43","Other hardwoods group","HTsd",0.55,790
+"53","Other hardwoods group","badom",0.45,790
+"6","Other hardwoods group","snagbatot",0.27,790
+"7","Other hardwoods group","tpadom",-0.3,790
+"24","Oak / pine group","QMDdom",0.57,13554
+"34","Oak / pine group","HTsd",0.48,13554
+"44","Oak / pine group","ddiscore",0.46,13554
+"54","Oak / pine group","snagbatot",0.24,13554
+"61","Oak / pine group","tpadom",-0.26,13554
+"25","Oak / gum / cypress group","QMDdom",0.56,5966
+"35","Oak / gum / cypress group","ddiscore",0.54,5966
+"45","Oak / gum / cypress group","HTsd",0.51,5966
+"55","Oak / gum / cypress group","HTquart",0.48,5966
+"62","Oak / gum / cypress group","tpadom",-0.21,5966
+"26","Tropical hardwoods group","HTquart",0.52,166
+"36","Tropical hardwoods group","ddiscore",0.52,166
+"46","Tropical hardwoods group","badom",0.4,166
+"56","Tropical hardwoods group","QMDdom",0.3,166
+"63","Tropical hardwoods group","tpadom",-0.21,166
+"27","Elm / ash / cottonwood group","QMDdom",0.38,6809
+"37","Elm / ash / cottonwood group","ddiscore",0.36,6809
+"47","Elm / ash / cottonwood group","HTsd",0.33,6809
+"57","Elm / ash / cottonwood group","HTquart",0.32,6809
+"28","Other eastern softwoods group","ddiscore",0.4,641
+"38","Other eastern softwoods group","HTquart",0.37,641
+"48","Other eastern softwoods group","HTsd",0.34,641
+"58","Other eastern softwoods group","QMDdom",0.34,641
+"64","Other eastern softwoods group","badom",0.26,641
+"71","Other eastern softwoods group","snagbatot",0.24,641
+"29","White / red / jack pine group","QMDdom",0.61,6770
+"39","White / red / jack pine group","HTsd",0.5,6770
+"49","White / red / jack pine group","HTquart",0.43,6770
+"59","White / red / jack pine group","snagbatot",0.24,6770
+"65","White / red / jack pine group","tpadom",-0.21,6770
+"210","Maple / beech / birch group","QMDdom",0.54,11075
+"310","Maple / beech / birch group","ddiscore",0.49,11075
+"410","Maple / beech / birch group","HTsd",0.44,11075
+"510","Maple / beech / birch group","HTquart",0.37,11075
+"66","Maple / beech / birch group","badom",0.23,11075
+"72","Maple / beech / birch group","tpadom",-0.29,11075
+"211","Spruce / fir group","QMDdom",0.37,4992
+"311","Spruce / fir group","HTsd",0.33,4992
+"411","Spruce / fir group","HTquart",0.27,4992
+"212","Aspen / birch group","QMDdom",0.67,5847
+"312","Aspen / birch group","HTsd",0.5,5847
+"412","Aspen / birch group","HTquart",0.43,5847
+"511","Aspen / birch group","snagbatot",0.4,5847
+"67","Aspen / birch group","tpadom",-0.41,5847
+"213","Exotic softwoods group","QMDdom",0.63,169
+"313","Exotic softwoods group","HTsd",0.61,169
+"413","Exotic softwoods group","HTquart",0.54,169
+"512","Exotic softwoods group","snagbatot",0.38,169
+"68","Exotic softwoods group","badom",0.28,169
+"73","Exotic softwoods group","tpadom",-0.3,169

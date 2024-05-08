@@ -2,7 +2,7 @@
 # Finds the plots with the correct dia of trees and number of trees
 n_big_tpa <- function(tree, big_tree_size){ 
   
-  tpa <- tree %>% filter(Status == "Live") %>% ungroup() %>% select(TPA_UNADJ)
+  tpa <- tree %>% filter(Status == "Live") %>% ungroup() %>% mutate(TPA_ADJ = TPA_UNADJ/CONDPROP_UNADJ) %>% select(TPA_ADJ)
   live <- tree %>% filter(Status == "Live") %>% ungroup() %>% select(DIA)
   
   sum(coalesce(tpa[live >= big_tree_size], 0), na.rm = TRUE)
@@ -11,9 +11,9 @@ n_big_tpa <- function(tree, big_tree_size){
 
 tpa_dead <- function(tree){ 
   
-  tpa <- tree %>% filter(Status == "Live") %>% ungroup() %>% select(TPA_UNADJ)
+  tpa <- tree %>% filter(Status == "Dead") %>% ungroup() %>% mutate(TPA_ADJ = TPA_UNADJ/CONDPROP_UNADJ) %>% select(TPA_ADJ)
   
-  sum(coalesce(tpa$TPA_UNADJ, 0), na.rm = TRUE)
+  sum(coalesce(tpa$TPA_ADJ, 0), na.rm = TRUE)
   
 }
 
@@ -33,29 +33,31 @@ classify_mog <- function(idx, tree, ccc){
       TPA_DEAD = tpa_dead(tree)
     ) %>% 
     left_join(tree %>% 
-                filter(DIA >= 5, Status == "Live") %>% 
-                mutate(BAA = BA * TPA_UNADJ) %>%
+                filter(DIA >= 5, 
+                       Status == "Live") %>% 
+                mutate(BAA = BA * (TPA_UNADJ/CONDPROP_UNADJ)) %>%
                 group_by(cuid) %>%
-                summarise(BAA = sum(BAA)),
+                summarise(BAA = sum(BAA, na.rm =T)),
               by='cuid') %>%
     left_join(x=ccc %>% select(-TPA_DEAD),y=., by='cuid') %>% 
     mutate(# Calculates the stand age
-      class_SA = fifelse(( STDAGE + (2023-MEASYEAR) > Stand_Age ), TRUE,  FALSE, na=FALSE),
+      #class_SA = fifelse(( STDAGE >= Stand_Age ), TRUE,  FALSE, na=FALSE),
+      class_SA = fifelse(( STDAGE + (2023-MEASYEAR) >= Stand_Age ), TRUE,  FALSE, na=FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
       # Needs to pass having above the threshold of large trees per acre and a basal area per acre
       # Over our threshold. which answers our Stand Basal Area question. 
-      class_SBA = fifelse(( BAA > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
+      class_SBA = fifelse(( BAA >= Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
       #class_SBA_2 = fifelse(( BALIVE > Stand_Basal_Area ), TRUE, FALSE, na=FALSE),
       # are the number of big trees over what we need for OG, will be used later on
       class_LTD = fifelse(( num_big_tree_per_acre >= Trees_Per_Acre ),TRUE, FALSE, na=FALSE),
       # need to apply conversions to basal area to convert from m2/ha to ft2/acre
-      class_DTPA = fifelse(( TPA_DEAD > Dead_Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
+      class_DTPA = fifelse(( TPA_DEAD >= Dead_Trees_Per_Acre ), TRUE, FALSE, na=FALSE),
       Age = STDAGE + (2023-MEASYEAR), 
       Stand_Basal_Area = BAA,
       Dead_Trees_Per_Acre = TPA_DEAD,
       community_abb = OG_Type
       ) %>% 
-    dplyr::select(cuid, contains('class'), num_big_tree_per_acre, Age, Stand_Basal_Area, Dead_Trees_Per_Acre,
+    dplyr::select(cuid, contains('class'), num_big_tree_per_acre, Age,STDAGE, Stand_Basal_Area, Dead_Trees_Per_Acre,
                   contains('community')) %>%
     ungroup()
   

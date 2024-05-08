@@ -2,7 +2,7 @@
 # Finds the plots with the correct dia of trees and number of trees
 n_big_tpa <- function(tree, big_tree_size){ 
   
-  tpa <- tree %>% filter(Status == "Live") %>% ungroup() %>% select(TPA_UNADJ)
+  tpa <- tree %>% filter(Status == "Live") %>% ungroup() %>% mutate(TPA_ADJ = TPA_UNADJ/CONDPROP_UNADJ) %>% select(TPA_ADJ)
   live <- tree %>% filter(Status == "Live") %>% ungroup() %>% select(DIA)
   
   sum(coalesce(tpa[live >= big_tree_size], 0), na.rm = TRUE)
@@ -17,12 +17,9 @@ classify_mog <- function(idx, tree, ccc){
   Large_Tree_Diameter <- defs$Large_Tree_Diameter[idx]
   OG_Type <- defs$OG_Type[idx]
   
-  Live_Ratio <- mean(ccc$TPA_LIVE/(ccc$TPA_LIVE+max(ccc$TPA_DEAD,0, na.rm=T)), na.rm=T)
-  
   tree %>% 
     summarise( # Determines the diameter of the tree and how many big trees per acre there are 
-      num_big_tree_per_acre = n_big_tpa(tree=., big_tree_size = Large_Tree_Diameter),
-      LIVE_TPA = mean(TPA_UNADJ * Live_Ratio, na.rm = T)
+      num_big_tree_per_acre = n_big_tpa(tree=., big_tree_size = Large_Tree_Diameter)
     ) %>% 
     left_join(x=ccc,y=., by='cuid') %>%  
     mutate(# Calculates the stand age

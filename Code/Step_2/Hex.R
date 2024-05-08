@@ -11,7 +11,7 @@ hex <- st_read('Files/gpkg/conus_hex_epsg6933.gpkg')
 #hex <- st_read('Files/gpkg/ef_hex.gpkg')
 
 Regions <- open_dataset("Files/OG_Regions/") %>% 
-  #filter(REGION %in% c("08", "09")) %>%
+  #filter(REGION %in% c("08")) %>%
   mutate(puid = str_remove(cuid, "_\\d+$")) %>%
   select(cuid, puid, Old_Growth, STATEAB, REGION) %>% 
   collect()
@@ -93,7 +93,7 @@ resHex <- function(data, grid_data, grid_name){
 
 }
 
-OG_Forest <- resHex(Region_Plot, Fire_Shed, grid_name = Fireshed_Code)
+OG_Forest <- resHex(Region_Plot, hex, grid_name = EMAP_HEX)
 
 dcr <- div_color_ramp(OG_Forest$OG_RATIO, increments = T,include_all = F, Extreme = F, middle_range = .99)
 plot(OG_Forest['class_f_RATIO'],pal=dcr$cols, breaks=dcr$breaks, border = NA)
